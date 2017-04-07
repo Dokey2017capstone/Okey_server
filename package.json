@@ -1,0 +1,22 @@
+{
+  "name": "okeyserver",
+  "version": "1.0.0",
+  "main": "testapp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dokey2017capstone/Okey_server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dokey2017capstone/Okey_server/issues"
+  },
+  "homepage": "https://github.com/Dokey2017capstone/Okey_server#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
