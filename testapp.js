@@ -1,5 +1,27 @@
+// Web server library
 var express = require('express');
 var app = express();
+
+var testData = '{"request" : ["spacing"], "spacingData" : "나는배가많이부른개발자야!", "modifiedData" : "aaaaaaaaaa"}'
+var jsonData = JSON.parse(testData);
+
+jsonData.request.forEach(function(e){
+	if(e == "spacing") {
+		console.log(jsonData.spacingData);
+		var spawn = require('child_process').spawn;
+		var py = spawn('python', ["/root/Okey_server/test/4_result.py", jsonData.spacingData]);
+		py.stdout.on('data', function (data) {
+			console.log(data.toString());
+		});		
+		py.stdout.on('exit', function (code) {
+			if (code != 0) {
+				console.log('Failed: ' + code);
+			}
+		});
+	}
+	else if(e == "modified")
+		console.log(e);
+});
 
 app.get('/', function(req, res){
         res.send('Okey Server');
@@ -11,12 +33,13 @@ var server = net.createServer(function(client) {
 	console.log('Client connection: ');
 	console.log('   local = %s:%s', client.localAddress, client.localPort);
 	console.log('   remote = %s:%s', client.remoteAddress, client.remotePort);
-	client.setTimeout(500);
+	client.setTimeout(3000);
 	client.setEncoding('utf8');
 	client.on('data', function(data) {
   		console.log('Received data from client on port %d: %s', client.remotePort, data.toString());
 		console.log('  Bytes received: ' + client.bytesRead);
-		writeData(client, 'Sending: ' + data.toString());
+		writeData(client, 'Sending: ' + data.toString() + '\n');
+		console.log('Sending: ' + data.toString() + '\n');
 		console.log('  Bytes sent: ' + client.bytesWritten);
 	});
 	client.on('end', function() {
@@ -35,7 +58,7 @@ var server = net.createServer(function(client) {
 	});
 });
 
-server.listen(8150, function() {
+server.listen(8100, function() {
 	console.log('Server listening: ' + JSON.stringify(server.address()));
 	server.on('close', function(){
 		console.log('Server Terminated');
