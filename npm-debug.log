@@ -1,0 +1,1731 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', 'spawn-sync' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData spawn-sync
+8 silly fetchNamedPackageData spawn-sync
+9 silly mapToRegistry name spawn-sync
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'spawn-sync',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'spawn-sync',
+12 silly mapToRegistry   name: 'spawn-sync',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/spawn-sync
+14 verbose request uri https://registry.npmjs.org/spawn-sync
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 12:53:24 PM
+17 verbose request id b51cce2741eb7e4c
+18 verbose lastModified Tue, 01 Nov 2016 17:18:14 GMT
+19 http request GET https://registry.npmjs.org/spawn-sync
+20 http 200 https://registry.npmjs.org/spawn-sync
+21 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+21 verbose headers   'content-type': 'application/json',
+21 verbose headers   'last-modified': 'Tue, 01 Nov 2016 17:18:14 GMT',
+21 verbose headers   'content-encoding': 'gzip',
+21 verbose headers   'cache-control': 'max-age=300',
+21 verbose headers   'content-length': '3616',
+21 verbose headers   'accept-ranges': 'bytes',
+21 verbose headers   date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+21 verbose headers   via: '1.1 varnish',
+21 verbose headers   age: '233',
+21 verbose headers   connection: 'keep-alive',
+21 verbose headers   'x-served-by': 'cache-nrt6122-NRT',
+21 verbose headers   'x-cache': 'HIT',
+21 verbose headers   'x-cache-hits': '1',
+21 verbose headers   'x-timer': 'S1492088005.724112,VS0,VE0',
+21 verbose headers   vary: 'Accept-Encoding' }
+22 silly get cb [ 200,
+22 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+22 silly get     'content-type': 'application/json',
+22 silly get     'last-modified': 'Tue, 01 Nov 2016 17:18:14 GMT',
+22 silly get     'content-encoding': 'gzip',
+22 silly get     'cache-control': 'max-age=300',
+22 silly get     'content-length': '3616',
+22 silly get     'accept-ranges': 'bytes',
+22 silly get     date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+22 silly get     via: '1.1 varnish',
+22 silly get     age: '233',
+22 silly get     connection: 'keep-alive',
+22 silly get     'x-served-by': 'cache-nrt6122-NRT',
+22 silly get     'x-cache': 'HIT',
+22 silly get     'x-cache-hits': '1',
+22 silly get     'x-timer': 'S1492088005.724112,VS0,VE0',
+22 silly get     vary: 'Accept-Encoding' } ]
+23 verbose get saving spawn-sync to /root/.npm/registry.npmjs.org/spawn-sync/.cache.json
+24 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+25 silly install normalizeTree
+26 silly loadCurrentTree Finishing
+27 silly loadIdealTree Starting
+28 silly install loadIdealTree
+29 silly cloneCurrentTree Starting
+30 silly install cloneCurrentTreeToIdealTree
+31 silly cloneCurrentTree Finishing
+32 silly loadShrinkwrap Starting
+33 silly install loadShrinkwrap
+34 silly loadShrinkwrap Finishing
+35 silly loadAllDepsIntoIdealTree Starting
+36 silly install loadAllDepsIntoIdealTree
+37 silly resolveWithNewModule spawn-sync@1.0.15 checking installable status
+38 silly cache add args [ 'spawn-sync', null ]
+39 verbose cache add spec spawn-sync
+40 silly cache add parsed spec Result {
+40 silly cache add   raw: 'spawn-sync',
+40 silly cache add   scope: null,
+40 silly cache add   escapedName: 'spawn-sync',
+40 silly cache add   name: 'spawn-sync',
+40 silly cache add   rawSpec: '',
+40 silly cache add   spec: 'latest',
+40 silly cache add   type: 'tag' }
+41 silly addNamed spawn-sync@latest
+42 verbose addNamed "latest" is being treated as a dist-tag for spawn-sync
+43 info addNameTag [ 'spawn-sync', 'latest' ]
+44 silly mapToRegistry name spawn-sync
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry data Result {
+47 silly mapToRegistry   raw: 'spawn-sync',
+47 silly mapToRegistry   scope: null,
+47 silly mapToRegistry   escapedName: 'spawn-sync',
+47 silly mapToRegistry   name: 'spawn-sync',
+47 silly mapToRegistry   rawSpec: '',
+47 silly mapToRegistry   spec: 'latest',
+47 silly mapToRegistry   type: 'tag' }
+48 silly mapToRegistry uri https://registry.npmjs.org/spawn-sync
+49 verbose addNameTag registry:https://registry.npmjs.org/spawn-sync not in flight; fetching
+50 verbose get https://registry.npmjs.org/spawn-sync not expired, no request
+51 silly addNameTag next cb for spawn-sync with tag latest
+52 silly addNamed spawn-sync@1.0.15
+53 verbose addNamed "1.0.15" is a plain semver version for spawn-sync
+54 silly cache afterAdd spawn-sync@1.0.15
+55 verbose afterAdd /root/.npm/spawn-sync/1.0.15/package/package.json not in flight; writing
+56 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+57 verbose afterAdd /root/.npm/spawn-sync/1.0.15/package/package.json written
+58 silly fetchNamedPackageData concat-stream
+59 silly mapToRegistry name concat-stream
+60 silly mapToRegistry using default registry
+61 silly mapToRegistry registry https://registry.npmjs.org/
+62 silly mapToRegistry data Result {
+62 silly mapToRegistry   raw: 'concat-stream',
+62 silly mapToRegistry   scope: null,
+62 silly mapToRegistry   escapedName: 'concat-stream',
+62 silly mapToRegistry   name: 'concat-stream',
+62 silly mapToRegistry   rawSpec: '',
+62 silly mapToRegistry   spec: 'latest',
+62 silly mapToRegistry   type: 'tag' }
+63 silly mapToRegistry uri https://registry.npmjs.org/concat-stream
+64 silly fetchNamedPackageData os-shim
+65 silly mapToRegistry name os-shim
+66 silly mapToRegistry using default registry
+67 silly mapToRegistry registry https://registry.npmjs.org/
+68 silly mapToRegistry data Result {
+68 silly mapToRegistry   raw: 'os-shim',
+68 silly mapToRegistry   scope: null,
+68 silly mapToRegistry   escapedName: 'os-shim',
+68 silly mapToRegistry   name: 'os-shim',
+68 silly mapToRegistry   rawSpec: '',
+68 silly mapToRegistry   spec: 'latest',
+68 silly mapToRegistry   type: 'tag' }
+69 silly mapToRegistry uri https://registry.npmjs.org/os-shim
+70 verbose request uri https://registry.npmjs.org/concat-stream
+71 verbose request no auth needed
+72 info attempt registry request try #1 at 12:53:24 PM
+73 verbose etag W/"58ea865a-a925"
+74 verbose lastModified Sun, 09 Apr 2017 19:07:06 GMT
+75 http request GET https://registry.npmjs.org/concat-stream
+76 verbose request uri https://registry.npmjs.org/os-shim
+77 verbose request no auth needed
+78 info attempt registry request try #1 at 12:53:24 PM
+79 verbose etag W/"55c3efb4-1c29"
+80 verbose lastModified Thu, 06 Aug 2015 23:37:24 GMT
+81 http request GET https://registry.npmjs.org/os-shim
+82 http 304 https://registry.npmjs.org/concat-stream
+83 verbose headers { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+83 verbose headers   via: '1.1 varnish',
+83 verbose headers   'cache-control': 'max-age=300',
+83 verbose headers   etag: 'W/"58ea865a-a925"',
+83 verbose headers   age: '186',
+83 verbose headers   connection: 'keep-alive',
+83 verbose headers   'x-served-by': 'cache-nrt6122-NRT',
+83 verbose headers   'x-cache': 'HIT',
+83 verbose headers   'x-cache-hits': '3',
+83 verbose headers   'x-timer': 'S1492088005.830574,VS0,VE0',
+83 verbose headers   vary: 'Accept-Encoding' }
+84 silly get cb [ 304,
+84 silly get   { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+84 silly get     via: '1.1 varnish',
+84 silly get     'cache-control': 'max-age=300',
+84 silly get     etag: 'W/"58ea865a-a925"',
+84 silly get     age: '186',
+84 silly get     connection: 'keep-alive',
+84 silly get     'x-served-by': 'cache-nrt6122-NRT',
+84 silly get     'x-cache': 'HIT',
+84 silly get     'x-cache-hits': '3',
+84 silly get     'x-timer': 'S1492088005.830574,VS0,VE0',
+84 silly get     vary: 'Accept-Encoding' } ]
+85 verbose etag https://registry.npmjs.org/concat-stream from cache
+86 verbose get saving concat-stream to /root/.npm/registry.npmjs.org/concat-stream/.cache.json
+87 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+88 silly resolveWithNewModule concat-stream@1.6.0 checking installable status
+89 silly cache add args [ 'concat-stream@^1.4.7', null ]
+90 verbose cache add spec concat-stream@^1.4.7
+91 silly cache add parsed spec Result {
+91 silly cache add   raw: 'concat-stream@^1.4.7',
+91 silly cache add   scope: null,
+91 silly cache add   escapedName: 'concat-stream',
+91 silly cache add   name: 'concat-stream',
+91 silly cache add   rawSpec: '^1.4.7',
+91 silly cache add   spec: '>=1.4.7 <2.0.0',
+91 silly cache add   type: 'range' }
+92 silly addNamed concat-stream@>=1.4.7 <2.0.0
+93 verbose addNamed ">=1.4.7 <2.0.0" is a valid semver range for concat-stream
+94 silly addNameRange { name: 'concat-stream',
+94 silly addNameRange   range: '>=1.4.7 <2.0.0',
+94 silly addNameRange   hasData: false }
+95 silly mapToRegistry name concat-stream
+96 silly mapToRegistry using default registry
+97 silly mapToRegistry registry https://registry.npmjs.org/
+98 silly mapToRegistry data Result {
+98 silly mapToRegistry   raw: 'concat-stream',
+98 silly mapToRegistry   scope: null,
+98 silly mapToRegistry   escapedName: 'concat-stream',
+98 silly mapToRegistry   name: 'concat-stream',
+98 silly mapToRegistry   rawSpec: '',
+98 silly mapToRegistry   spec: 'latest',
+98 silly mapToRegistry   type: 'tag' }
+99 silly mapToRegistry uri https://registry.npmjs.org/concat-stream
+100 verbose addNameRange registry:https://registry.npmjs.org/concat-stream not in flight; fetching
+101 verbose get https://registry.npmjs.org/concat-stream not expired, no request
+102 silly addNameRange number 2 { name: 'concat-stream', range: '>=1.4.7 <2.0.0', hasData: true }
+103 silly addNameRange versions [ 'concat-stream',
+103 silly addNameRange   [ '0.0.1',
+103 silly addNameRange     '0.0.2',
+103 silly addNameRange     '0.0.3',
+103 silly addNameRange     '0.0.4',
+103 silly addNameRange     '0.0.5',
+103 silly addNameRange     '0.0.6',
+103 silly addNameRange     '0.0.7',
+103 silly addNameRange     '0.0.8',
+103 silly addNameRange     '0.0.9',
+103 silly addNameRange     '0.1.0',
+103 silly addNameRange     '0.1.1',
+103 silly addNameRange     '1.0.0',
+103 silly addNameRange     '1.0.1',
+103 silly addNameRange     '1.1.0',
+103 silly addNameRange     '1.2.0',
+103 silly addNameRange     '1.2.1',
+103 silly addNameRange     '1.3.0',
+103 silly addNameRange     '1.3.1',
+103 silly addNameRange     '1.4.0',
+103 silly addNameRange     '1.4.1',
+103 silly addNameRange     '1.4.2',
+103 silly addNameRange     '1.4.3',
+103 silly addNameRange     '1.4.4',
+103 silly addNameRange     '1.4.5',
+103 silly addNameRange     '1.4.6',
+103 silly addNameRange     '1.4.7',
+103 silly addNameRange     '1.4.8',
+103 silly addNameRange     '1.4.10',
+103 silly addNameRange     '1.5.0',
+103 silly addNameRange     '1.5.1',
+103 silly addNameRange     '1.5.2',
+103 silly addNameRange     '1.6.0' ] ]
+104 silly addNamed concat-stream@1.6.0
+105 verbose addNamed "1.6.0" is a plain semver version for concat-stream
+106 silly cache afterAdd concat-stream@1.6.0
+107 verbose afterAdd /root/.npm/concat-stream/1.6.0/package/package.json not in flight; writing
+108 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+109 verbose afterAdd /root/.npm/concat-stream/1.6.0/package/package.json written
+110 http 304 https://registry.npmjs.org/os-shim
+111 verbose headers { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+111 verbose headers   via: '1.1 varnish',
+111 verbose headers   'cache-control': 'max-age=300',
+111 verbose headers   etag: 'W/"55c3efb4-1c29"',
+111 verbose headers   age: '232',
+111 verbose headers   connection: 'keep-alive',
+111 verbose headers   'x-served-by': 'cache-nrt6131-NRT',
+111 verbose headers   'x-cache': 'HIT',
+111 verbose headers   'x-cache-hits': '1',
+111 verbose headers   'x-timer': 'S1492088005.840205,VS0,VE0',
+111 verbose headers   vary: 'Accept-Encoding' }
+112 silly get cb [ 304,
+112 silly get   { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+112 silly get     via: '1.1 varnish',
+112 silly get     'cache-control': 'max-age=300',
+112 silly get     etag: 'W/"55c3efb4-1c29"',
+112 silly get     age: '232',
+112 silly get     connection: 'keep-alive',
+112 silly get     'x-served-by': 'cache-nrt6131-NRT',
+112 silly get     'x-cache': 'HIT',
+112 silly get     'x-cache-hits': '1',
+112 silly get     'x-timer': 'S1492088005.840205,VS0,VE0',
+112 silly get     vary: 'Accept-Encoding' } ]
+113 verbose etag https://registry.npmjs.org/os-shim from cache
+114 verbose get saving os-shim to /root/.npm/registry.npmjs.org/os-shim/.cache.json
+115 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+116 silly resolveWithNewModule os-shim@0.1.3 checking installable status
+117 silly cache add args [ 'os-shim@^0.1.2', null ]
+118 verbose cache add spec os-shim@^0.1.2
+119 silly cache add parsed spec Result {
+119 silly cache add   raw: 'os-shim@^0.1.2',
+119 silly cache add   scope: null,
+119 silly cache add   escapedName: 'os-shim',
+119 silly cache add   name: 'os-shim',
+119 silly cache add   rawSpec: '^0.1.2',
+119 silly cache add   spec: '>=0.1.2 <0.2.0',
+119 silly cache add   type: 'range' }
+120 silly addNamed os-shim@>=0.1.2 <0.2.0
+121 verbose addNamed ">=0.1.2 <0.2.0" is a valid semver range for os-shim
+122 silly addNameRange { name: 'os-shim', range: '>=0.1.2 <0.2.0', hasData: false }
+123 silly mapToRegistry name os-shim
+124 silly mapToRegistry using default registry
+125 silly mapToRegistry registry https://registry.npmjs.org/
+126 silly mapToRegistry data Result {
+126 silly mapToRegistry   raw: 'os-shim',
+126 silly mapToRegistry   scope: null,
+126 silly mapToRegistry   escapedName: 'os-shim',
+126 silly mapToRegistry   name: 'os-shim',
+126 silly mapToRegistry   rawSpec: '',
+126 silly mapToRegistry   spec: 'latest',
+126 silly mapToRegistry   type: 'tag' }
+127 silly mapToRegistry uri https://registry.npmjs.org/os-shim
+128 verbose addNameRange registry:https://registry.npmjs.org/os-shim not in flight; fetching
+129 verbose get https://registry.npmjs.org/os-shim not expired, no request
+130 silly addNameRange number 2 { name: 'os-shim', range: '>=0.1.2 <0.2.0', hasData: true }
+131 silly addNameRange versions [ 'os-shim', [ '0.1.0', '0.1.1', '0.1.2', '0.1.3' ] ]
+132 silly addNamed os-shim@0.1.3
+133 verbose addNamed "0.1.3" is a plain semver version for os-shim
+134 silly cache afterAdd os-shim@0.1.3
+135 verbose afterAdd /root/.npm/os-shim/0.1.3/package/package.json not in flight; writing
+136 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+137 verbose afterAdd /root/.npm/os-shim/0.1.3/package/package.json written
+138 silly fetchNamedPackageData typedarray
+139 silly mapToRegistry name typedarray
+140 silly mapToRegistry using default registry
+141 silly mapToRegistry registry https://registry.npmjs.org/
+142 silly mapToRegistry data Result {
+142 silly mapToRegistry   raw: 'typedarray',
+142 silly mapToRegistry   scope: null,
+142 silly mapToRegistry   escapedName: 'typedarray',
+142 silly mapToRegistry   name: 'typedarray',
+142 silly mapToRegistry   rawSpec: '',
+142 silly mapToRegistry   spec: 'latest',
+142 silly mapToRegistry   type: 'tag' }
+143 silly mapToRegistry uri https://registry.npmjs.org/typedarray
+144 silly fetchNamedPackageData readable-stream
+145 silly mapToRegistry name readable-stream
+146 silly mapToRegistry using default registry
+147 silly mapToRegistry registry https://registry.npmjs.org/
+148 silly mapToRegistry data Result {
+148 silly mapToRegistry   raw: 'readable-stream',
+148 silly mapToRegistry   scope: null,
+148 silly mapToRegistry   escapedName: 'readable-stream',
+148 silly mapToRegistry   name: 'readable-stream',
+148 silly mapToRegistry   rawSpec: '',
+148 silly mapToRegistry   spec: 'latest',
+148 silly mapToRegistry   type: 'tag' }
+149 silly mapToRegistry uri https://registry.npmjs.org/readable-stream
+150 verbose request uri https://registry.npmjs.org/typedarray
+151 verbose request no auth needed
+152 info attempt registry request try #1 at 12:53:24 PM
+153 verbose etag W/"5376cf01-2c2f"
+154 verbose lastModified Sat, 17 May 2014 02:52:49 GMT
+155 http request GET https://registry.npmjs.org/typedarray
+156 verbose request uri https://registry.npmjs.org/readable-stream
+157 verbose request no auth needed
+158 info attempt registry request try #1 at 12:53:24 PM
+159 verbose etag W/"58e899e9-160e2"
+160 verbose lastModified Sat, 08 Apr 2017 08:06:01 GMT
+161 http request GET https://registry.npmjs.org/readable-stream
+162 http 304 https://registry.npmjs.org/typedarray
+163 verbose headers { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+163 verbose headers   via: '1.1 varnish',
+163 verbose headers   'cache-control': 'max-age=300',
+163 verbose headers   etag: 'W/"5376cf01-2c2f"',
+163 verbose headers   age: '173',
+163 verbose headers   connection: 'keep-alive',
+163 verbose headers   'x-served-by': 'cache-nrt6122-NRT',
+163 verbose headers   'x-cache': 'HIT',
+163 verbose headers   'x-cache-hits': '2',
+163 verbose headers   'x-timer': 'S1492088005.872130,VS0,VE0',
+163 verbose headers   vary: 'Accept-Encoding' }
+164 silly get cb [ 304,
+164 silly get   { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+164 silly get     via: '1.1 varnish',
+164 silly get     'cache-control': 'max-age=300',
+164 silly get     etag: 'W/"5376cf01-2c2f"',
+164 silly get     age: '173',
+164 silly get     connection: 'keep-alive',
+164 silly get     'x-served-by': 'cache-nrt6122-NRT',
+164 silly get     'x-cache': 'HIT',
+164 silly get     'x-cache-hits': '2',
+164 silly get     'x-timer': 'S1492088005.872130,VS0,VE0',
+164 silly get     vary: 'Accept-Encoding' } ]
+165 verbose etag https://registry.npmjs.org/typedarray from cache
+166 verbose get saving typedarray to /root/.npm/registry.npmjs.org/typedarray/.cache.json
+167 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+168 silly resolveWithNewModule typedarray@0.0.6 checking installable status
+169 silly cache add args [ 'typedarray@^0.0.6', null ]
+170 verbose cache add spec typedarray@^0.0.6
+171 silly cache add parsed spec Result {
+171 silly cache add   raw: 'typedarray@^0.0.6',
+171 silly cache add   scope: null,
+171 silly cache add   escapedName: 'typedarray',
+171 silly cache add   name: 'typedarray',
+171 silly cache add   rawSpec: '^0.0.6',
+171 silly cache add   spec: '>=0.0.6 <0.0.7',
+171 silly cache add   type: 'range' }
+172 silly addNamed typedarray@>=0.0.6 <0.0.7
+173 verbose addNamed ">=0.0.6 <0.0.7" is a valid semver range for typedarray
+174 silly addNameRange { name: 'typedarray', range: '>=0.0.6 <0.0.7', hasData: false }
+175 silly mapToRegistry name typedarray
+176 silly mapToRegistry using default registry
+177 silly mapToRegistry registry https://registry.npmjs.org/
+178 silly mapToRegistry data Result {
+178 silly mapToRegistry   raw: 'typedarray',
+178 silly mapToRegistry   scope: null,
+178 silly mapToRegistry   escapedName: 'typedarray',
+178 silly mapToRegistry   name: 'typedarray',
+178 silly mapToRegistry   rawSpec: '',
+178 silly mapToRegistry   spec: 'latest',
+178 silly mapToRegistry   type: 'tag' }
+179 silly mapToRegistry uri https://registry.npmjs.org/typedarray
+180 verbose addNameRange registry:https://registry.npmjs.org/typedarray not in flight; fetching
+181 http 304 https://registry.npmjs.org/readable-stream
+182 verbose headers { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+182 verbose headers   via: '1.1 varnish',
+182 verbose headers   'cache-control': 'max-age=300',
+182 verbose headers   etag: 'W/"58e899e9-160e2"',
+182 verbose headers   age: '56',
+182 verbose headers   connection: 'keep-alive',
+182 verbose headers   'x-served-by': 'cache-nrt6131-NRT',
+182 verbose headers   'x-cache': 'HIT',
+182 verbose headers   'x-cache-hits': '4',
+182 verbose headers   'x-timer': 'S1492088005.868043,VS0,VE0',
+182 verbose headers   vary: 'Accept-Encoding' }
+183 silly get cb [ 304,
+183 silly get   { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+183 silly get     via: '1.1 varnish',
+183 silly get     'cache-control': 'max-age=300',
+183 silly get     etag: 'W/"58e899e9-160e2"',
+183 silly get     age: '56',
+183 silly get     connection: 'keep-alive',
+183 silly get     'x-served-by': 'cache-nrt6131-NRT',
+183 silly get     'x-cache': 'HIT',
+183 silly get     'x-cache-hits': '4',
+183 silly get     'x-timer': 'S1492088005.868043,VS0,VE0',
+183 silly get     vary: 'Accept-Encoding' } ]
+184 verbose etag https://registry.npmjs.org/readable-stream from cache
+185 verbose get saving readable-stream to /root/.npm/registry.npmjs.org/readable-stream/.cache.json
+186 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+187 verbose get https://registry.npmjs.org/typedarray not expired, no request
+188 silly addNameRange number 2 { name: 'typedarray', range: '>=0.0.6 <0.0.7', hasData: true }
+189 silly addNameRange versions [ 'typedarray',
+189 silly addNameRange   [ '0.0.0', '0.0.1', '0.0.2', '0.0.3', '0.0.4', '0.0.5', '0.0.6' ] ]
+190 silly addNamed typedarray@0.0.6
+191 verbose addNamed "0.0.6" is a plain semver version for typedarray
+192 silly cache afterAdd typedarray@0.0.6
+193 verbose afterAdd /root/.npm/typedarray/0.0.6/package/package.json not in flight; writing
+194 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+195 silly resolveWithNewModule readable-stream@2.2.9 checking installable status
+196 silly cache add args [ 'readable-stream@^2.2.2', null ]
+197 verbose cache add spec readable-stream@^2.2.2
+198 silly cache add parsed spec Result {
+198 silly cache add   raw: 'readable-stream@^2.2.2',
+198 silly cache add   scope: null,
+198 silly cache add   escapedName: 'readable-stream',
+198 silly cache add   name: 'readable-stream',
+198 silly cache add   rawSpec: '^2.2.2',
+198 silly cache add   spec: '>=2.2.2 <3.0.0',
+198 silly cache add   type: 'range' }
+199 silly addNamed readable-stream@>=2.2.2 <3.0.0
+200 verbose addNamed ">=2.2.2 <3.0.0" is a valid semver range for readable-stream
+201 silly addNameRange { name: 'readable-stream',
+201 silly addNameRange   range: '>=2.2.2 <3.0.0',
+201 silly addNameRange   hasData: false }
+202 silly mapToRegistry name readable-stream
+203 silly mapToRegistry using default registry
+204 silly mapToRegistry registry https://registry.npmjs.org/
+205 silly mapToRegistry data Result {
+205 silly mapToRegistry   raw: 'readable-stream',
+205 silly mapToRegistry   scope: null,
+205 silly mapToRegistry   escapedName: 'readable-stream',
+205 silly mapToRegistry   name: 'readable-stream',
+205 silly mapToRegistry   rawSpec: '',
+205 silly mapToRegistry   spec: 'latest',
+205 silly mapToRegistry   type: 'tag' }
+206 silly mapToRegistry uri https://registry.npmjs.org/readable-stream
+207 verbose addNameRange registry:https://registry.npmjs.org/readable-stream not in flight; fetching
+208 verbose get https://registry.npmjs.org/readable-stream not expired, no request
+209 silly addNameRange number 2 { name: 'readable-stream',
+209 silly addNameRange   range: '>=2.2.2 <3.0.0',
+209 silly addNameRange   hasData: true }
+210 silly addNameRange versions [ 'readable-stream',
+210 silly addNameRange   [ '0.0.1',
+210 silly addNameRange     '0.0.2',
+210 silly addNameRange     '0.0.3',
+210 silly addNameRange     '0.0.4',
+210 silly addNameRange     '0.1.0',
+210 silly addNameRange     '0.2.0',
+210 silly addNameRange     '0.3.0',
+210 silly addNameRange     '0.3.1',
+210 silly addNameRange     '1.0.0',
+210 silly addNameRange     '1.0.1',
+210 silly addNameRange     '1.0.2',
+210 silly addNameRange     '1.0.15',
+210 silly addNameRange     '1.0.17',
+210 silly addNameRange     '1.1.7',
+210 silly addNameRange     '1.1.8',
+210 silly addNameRange     '1.1.9',
+210 silly addNameRange     '1.0.24',
+210 silly addNameRange     '1.0.25',
+210 silly addNameRange     '1.1.10',
+210 silly addNameRange     '1.0.25-1',
+210 silly addNameRange     '1.1.11',
+210 silly addNameRange     '1.0.26',
+210 silly addNameRange     '1.0.26-1',
+210 silly addNameRange     '1.1.11-1',
+210 silly addNameRange     '1.0.26-2',
+210 silly addNameRange     '1.1.12',
+210 silly addNameRange     '1.0.26-3',
+210 silly addNameRange     '1.0.26-4',
+210 silly addNameRange     '1.1.12-1',
+210 silly addNameRange     '1.0.27-1',
+210 silly addNameRange     '1.1.13-1',
+210 silly addNameRange     '1.0.31',
+210 silly addNameRange     '1.1.13',
+210 silly addNameRange     '1.0.32',
+210 silly addNameRange     '1.0.32-1',
+210 silly addNameRange     '1.0.33-1',
+210 silly addNameRange     '1.0.33-2',
+210 silly addNameRange     '1.0.33',
+210 silly addNameRange     '2.0.0',
+210 silly addNameRange     '2.0.1',
+210 silly addNameRange     '2.0.2',
+210 silly addNameRange     '2.0.3',
+210 silly addNameRange     '2.0.4',
+210 silly addNameRange     '2.0.5',
+210 silly addNameRange     '2.0.6',
+210 silly addNameRange     '1.0.34',
+210 silly addNameRange     '1.1.14',
+210 silly addNameRange     '2.1.0',
+210 silly addNameRange     '2.1.1',
+210 silly addNameRange     '2.1.2',
+210 silly addNameRange     '2.1.3',
+210 silly addNameRange     '2.1.4',
+210 silly addNameRange     '2.1.5',
+210 silly addNameRange     '2.2.0',
+210 silly addNameRange     '2.2.1',
+210 silly addNameRange     '2.2.2',
+210 silly addNameRange     '2.2.3',
+210 silly addNameRange     '2.2.4',
+210 silly addNameRange     '2.2.5',
+210 silly addNameRange     '2.2.6',
+210 silly addNameRange     '2.2.7',
+210 silly addNameRange     '2.2.8',
+210 silly addNameRange     '2.2.9' ] ]
+211 silly addNamed readable-stream@2.2.9
+212 verbose addNamed "2.2.9" is a plain semver version for readable-stream
+213 verbose afterAdd /root/.npm/typedarray/0.0.6/package/package.json written
+214 silly cache afterAdd readable-stream@2.2.9
+215 verbose afterAdd /root/.npm/readable-stream/2.2.9/package/package.json not in flight; writing
+216 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+217 verbose afterAdd /root/.npm/readable-stream/2.2.9/package/package.json written
+218 silly fetchNamedPackageData buffer-shims
+219 silly mapToRegistry name buffer-shims
+220 silly mapToRegistry using default registry
+221 silly mapToRegistry registry https://registry.npmjs.org/
+222 silly mapToRegistry data Result {
+222 silly mapToRegistry   raw: 'buffer-shims',
+222 silly mapToRegistry   scope: null,
+222 silly mapToRegistry   escapedName: 'buffer-shims',
+222 silly mapToRegistry   name: 'buffer-shims',
+222 silly mapToRegistry   rawSpec: '',
+222 silly mapToRegistry   spec: 'latest',
+222 silly mapToRegistry   type: 'tag' }
+223 silly mapToRegistry uri https://registry.npmjs.org/buffer-shims
+224 silly fetchNamedPackageData core-util-is
+225 silly mapToRegistry name core-util-is
+226 silly mapToRegistry using default registry
+227 silly mapToRegistry registry https://registry.npmjs.org/
+228 silly mapToRegistry data Result {
+228 silly mapToRegistry   raw: 'core-util-is',
+228 silly mapToRegistry   scope: null,
+228 silly mapToRegistry   escapedName: 'core-util-is',
+228 silly mapToRegistry   name: 'core-util-is',
+228 silly mapToRegistry   rawSpec: '',
+228 silly mapToRegistry   spec: 'latest',
+228 silly mapToRegistry   type: 'tag' }
+229 silly mapToRegistry uri https://registry.npmjs.org/core-util-is
+230 silly fetchNamedPackageData isarray
+231 silly mapToRegistry name isarray
+232 silly mapToRegistry using default registry
+233 silly mapToRegistry registry https://registry.npmjs.org/
+234 silly mapToRegistry data Result {
+234 silly mapToRegistry   raw: 'isarray',
+234 silly mapToRegistry   scope: null,
+234 silly mapToRegistry   escapedName: 'isarray',
+234 silly mapToRegistry   name: 'isarray',
+234 silly mapToRegistry   rawSpec: '',
+234 silly mapToRegistry   spec: 'latest',
+234 silly mapToRegistry   type: 'tag' }
+235 silly mapToRegistry uri https://registry.npmjs.org/isarray
+236 silly fetchNamedPackageData process-nextick-args
+237 silly mapToRegistry name process-nextick-args
+238 silly mapToRegistry using default registry
+239 silly mapToRegistry registry https://registry.npmjs.org/
+240 silly mapToRegistry data Result {
+240 silly mapToRegistry   raw: 'process-nextick-args',
+240 silly mapToRegistry   scope: null,
+240 silly mapToRegistry   escapedName: 'process-nextick-args',
+240 silly mapToRegistry   name: 'process-nextick-args',
+240 silly mapToRegistry   rawSpec: '',
+240 silly mapToRegistry   spec: 'latest',
+240 silly mapToRegistry   type: 'tag' }
+241 silly mapToRegistry uri https://registry.npmjs.org/process-nextick-args
+242 silly fetchNamedPackageData string_decoder
+243 silly mapToRegistry name string_decoder
+244 silly mapToRegistry using default registry
+245 silly mapToRegistry registry https://registry.npmjs.org/
+246 silly mapToRegistry data Result {
+246 silly mapToRegistry   raw: 'string_decoder',
+246 silly mapToRegistry   scope: null,
+246 silly mapToRegistry   escapedName: 'string_decoder',
+246 silly mapToRegistry   name: 'string_decoder',
+246 silly mapToRegistry   rawSpec: '',
+246 silly mapToRegistry   spec: 'latest',
+246 silly mapToRegistry   type: 'tag' }
+247 silly mapToRegistry uri https://registry.npmjs.org/string_decoder
+248 silly fetchNamedPackageData util-deprecate
+249 silly mapToRegistry name util-deprecate
+250 silly mapToRegistry using default registry
+251 silly mapToRegistry registry https://registry.npmjs.org/
+252 silly mapToRegistry data Result {
+252 silly mapToRegistry   raw: 'util-deprecate',
+252 silly mapToRegistry   scope: null,
+252 silly mapToRegistry   escapedName: 'util-deprecate',
+252 silly mapToRegistry   name: 'util-deprecate',
+252 silly mapToRegistry   rawSpec: '',
+252 silly mapToRegistry   spec: 'latest',
+252 silly mapToRegistry   type: 'tag' }
+253 silly mapToRegistry uri https://registry.npmjs.org/util-deprecate
+254 verbose request uri https://registry.npmjs.org/buffer-shims
+255 verbose request no auth needed
+256 info attempt registry request try #1 at 12:53:24 PM
+257 verbose etag W/"572ce87b-833"
+258 verbose lastModified Fri, 06 May 2016 18:54:51 GMT
+259 http request GET https://registry.npmjs.org/buffer-shims
+260 verbose request uri https://registry.npmjs.org/process-nextick-args
+261 verbose request no auth needed
+262 info attempt registry request try #1 at 12:53:24 PM
+263 verbose lastModified Tue, 01 Nov 2016 18:02:33 GMT
+264 http request GET https://registry.npmjs.org/process-nextick-args
+265 verbose request uri https://registry.npmjs.org/string_decoder
+266 verbose request no auth needed
+267 info attempt registry request try #1 at 12:53:24 PM
+268 verbose etag W/"58e644cb-29d9"
+269 verbose lastModified Thu, 06 Apr 2017 13:38:19 GMT
+270 http request GET https://registry.npmjs.org/string_decoder
+271 verbose request uri https://registry.npmjs.org/core-util-is
+272 verbose request no auth needed
+273 info attempt registry request try #1 at 12:53:24 PM
+274 verbose lastModified Wed, 01 Mar 2017 06:11:08 GMT
+275 http request GET https://registry.npmjs.org/core-util-is
+276 verbose request uri https://registry.npmjs.org/isarray
+277 verbose request no auth needed
+278 info attempt registry request try #1 at 12:53:24 PM
+279 verbose etag W/"5818d2eb-226a"
+280 verbose lastModified Tue, 01 Nov 2016 17:37:47 GMT
+281 http request GET https://registry.npmjs.org/isarray
+282 verbose request uri https://registry.npmjs.org/util-deprecate
+283 verbose request no auth needed
+284 info attempt registry request try #1 at 12:53:24 PM
+285 verbose etag W/"5818e34b-16d9"
+286 verbose lastModified Tue, 01 Nov 2016 18:47:39 GMT
+287 http request GET https://registry.npmjs.org/util-deprecate
+288 http 304 https://registry.npmjs.org/buffer-shims
+289 verbose headers { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+289 verbose headers   via: '1.1 varnish',
+289 verbose headers   'cache-control': 'max-age=300',
+289 verbose headers   etag: 'W/"572ce87b-833"',
+289 verbose headers   age: '96',
+289 verbose headers   connection: 'keep-alive',
+289 verbose headers   'x-served-by': 'cache-nrt6122-NRT',
+289 verbose headers   'x-cache': 'HIT',
+289 verbose headers   'x-cache-hits': '2',
+289 verbose headers   'x-timer': 'S1492088005.923528,VS0,VE0',
+289 verbose headers   vary: 'Accept-Encoding' }
+290 silly get cb [ 304,
+290 silly get   { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+290 silly get     via: '1.1 varnish',
+290 silly get     'cache-control': 'max-age=300',
+290 silly get     etag: 'W/"572ce87b-833"',
+290 silly get     age: '96',
+290 silly get     connection: 'keep-alive',
+290 silly get     'x-served-by': 'cache-nrt6122-NRT',
+290 silly get     'x-cache': 'HIT',
+290 silly get     'x-cache-hits': '2',
+290 silly get     'x-timer': 'S1492088005.923528,VS0,VE0',
+290 silly get     vary: 'Accept-Encoding' } ]
+291 verbose etag https://registry.npmjs.org/buffer-shims from cache
+292 verbose get saving buffer-shims to /root/.npm/registry.npmjs.org/buffer-shims/.cache.json
+293 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+294 http 200 https://registry.npmjs.org/process-nextick-args
+295 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+295 verbose headers   'content-type': 'application/json',
+295 verbose headers   'last-modified': 'Tue, 01 Nov 2016 18:02:33 GMT',
+295 verbose headers   'content-encoding': 'gzip',
+295 verbose headers   'cache-control': 'max-age=300',
+295 verbose headers   'content-length': '1673',
+295 verbose headers   'accept-ranges': 'bytes',
+295 verbose headers   date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+295 verbose headers   via: '1.1 varnish',
+295 verbose headers   age: '131',
+295 verbose headers   connection: 'keep-alive',
+295 verbose headers   'x-served-by': 'cache-nrt6131-NRT',
+295 verbose headers   'x-cache': 'HIT',
+295 verbose headers   'x-cache-hits': '4',
+295 verbose headers   'x-timer': 'S1492088005.917357,VS0,VE0',
+295 verbose headers   vary: 'Accept-Encoding' }
+296 silly get cb [ 200,
+296 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+296 silly get     'content-type': 'application/json',
+296 silly get     'last-modified': 'Tue, 01 Nov 2016 18:02:33 GMT',
+296 silly get     'content-encoding': 'gzip',
+296 silly get     'cache-control': 'max-age=300',
+296 silly get     'content-length': '1673',
+296 silly get     'accept-ranges': 'bytes',
+296 silly get     date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+296 silly get     via: '1.1 varnish',
+296 silly get     age: '131',
+296 silly get     connection: 'keep-alive',
+296 silly get     'x-served-by': 'cache-nrt6131-NRT',
+296 silly get     'x-cache': 'HIT',
+296 silly get     'x-cache-hits': '4',
+296 silly get     'x-timer': 'S1492088005.917357,VS0,VE0',
+296 silly get     vary: 'Accept-Encoding' } ]
+297 verbose get saving process-nextick-args to /root/.npm/registry.npmjs.org/process-nextick-args/.cache.json
+298 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+299 silly resolveWithNewModule buffer-shims@1.0.0 checking installable status
+300 silly cache add args [ 'buffer-shims@~1.0.0', null ]
+301 verbose cache add spec buffer-shims@~1.0.0
+302 silly cache add parsed spec Result {
+302 silly cache add   raw: 'buffer-shims@~1.0.0',
+302 silly cache add   scope: null,
+302 silly cache add   escapedName: 'buffer-shims',
+302 silly cache add   name: 'buffer-shims',
+302 silly cache add   rawSpec: '~1.0.0',
+302 silly cache add   spec: '>=1.0.0 <1.1.0',
+302 silly cache add   type: 'range' }
+303 silly addNamed buffer-shims@>=1.0.0 <1.1.0
+304 verbose addNamed ">=1.0.0 <1.1.0" is a valid semver range for buffer-shims
+305 silly addNameRange { name: 'buffer-shims', range: '>=1.0.0 <1.1.0', hasData: false }
+306 silly mapToRegistry name buffer-shims
+307 silly mapToRegistry using default registry
+308 silly mapToRegistry registry https://registry.npmjs.org/
+309 silly mapToRegistry data Result {
+309 silly mapToRegistry   raw: 'buffer-shims',
+309 silly mapToRegistry   scope: null,
+309 silly mapToRegistry   escapedName: 'buffer-shims',
+309 silly mapToRegistry   name: 'buffer-shims',
+309 silly mapToRegistry   rawSpec: '',
+309 silly mapToRegistry   spec: 'latest',
+309 silly mapToRegistry   type: 'tag' }
+310 silly mapToRegistry uri https://registry.npmjs.org/buffer-shims
+311 verbose addNameRange registry:https://registry.npmjs.org/buffer-shims not in flight; fetching
+312 silly resolveWithNewModule process-nextick-args@1.0.7 checking installable status
+313 silly cache add args [ 'process-nextick-args@~1.0.6', null ]
+314 verbose cache add spec process-nextick-args@~1.0.6
+315 silly cache add parsed spec Result {
+315 silly cache add   raw: 'process-nextick-args@~1.0.6',
+315 silly cache add   scope: null,
+315 silly cache add   escapedName: 'process-nextick-args',
+315 silly cache add   name: 'process-nextick-args',
+315 silly cache add   rawSpec: '~1.0.6',
+315 silly cache add   spec: '>=1.0.6 <1.1.0',
+315 silly cache add   type: 'range' }
+316 silly addNamed process-nextick-args@>=1.0.6 <1.1.0
+317 verbose addNamed ">=1.0.6 <1.1.0" is a valid semver range for process-nextick-args
+318 silly addNameRange { name: 'process-nextick-args',
+318 silly addNameRange   range: '>=1.0.6 <1.1.0',
+318 silly addNameRange   hasData: false }
+319 silly mapToRegistry name process-nextick-args
+320 silly mapToRegistry using default registry
+321 silly mapToRegistry registry https://registry.npmjs.org/
+322 silly mapToRegistry data Result {
+322 silly mapToRegistry   raw: 'process-nextick-args',
+322 silly mapToRegistry   scope: null,
+322 silly mapToRegistry   escapedName: 'process-nextick-args',
+322 silly mapToRegistry   name: 'process-nextick-args',
+322 silly mapToRegistry   rawSpec: '',
+322 silly mapToRegistry   spec: 'latest',
+322 silly mapToRegistry   type: 'tag' }
+323 silly mapToRegistry uri https://registry.npmjs.org/process-nextick-args
+324 verbose addNameRange registry:https://registry.npmjs.org/process-nextick-args not in flight; fetching
+325 http 304 https://registry.npmjs.org/string_decoder
+326 verbose headers { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+326 verbose headers   via: '1.1 varnish',
+326 verbose headers   'cache-control': 'max-age=300',
+326 verbose headers   etag: 'W/"58e644cb-29d9"',
+326 verbose headers   age: '41',
+326 verbose headers   connection: 'keep-alive',
+326 verbose headers   'x-served-by': 'cache-nrt6132-NRT',
+326 verbose headers   'x-cache': 'HIT',
+326 verbose headers   'x-cache-hits': '6',
+326 verbose headers   'x-timer': 'S1492088005.924859,VS0,VE0',
+326 verbose headers   vary: 'Accept-Encoding' }
+327 silly get cb [ 304,
+327 silly get   { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+327 silly get     via: '1.1 varnish',
+327 silly get     'cache-control': 'max-age=300',
+327 silly get     etag: 'W/"58e644cb-29d9"',
+327 silly get     age: '41',
+327 silly get     connection: 'keep-alive',
+327 silly get     'x-served-by': 'cache-nrt6132-NRT',
+327 silly get     'x-cache': 'HIT',
+327 silly get     'x-cache-hits': '6',
+327 silly get     'x-timer': 'S1492088005.924859,VS0,VE0',
+327 silly get     vary: 'Accept-Encoding' } ]
+328 verbose etag https://registry.npmjs.org/string_decoder from cache
+329 verbose get saving string_decoder to /root/.npm/registry.npmjs.org/string_decoder/.cache.json
+330 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+331 http 304 https://registry.npmjs.org/isarray
+332 verbose headers { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+332 verbose headers   via: '1.1 varnish',
+332 verbose headers   'cache-control': 'max-age=300',
+332 verbose headers   etag: 'W/"5818d2eb-226a"',
+332 verbose headers   age: '204',
+332 verbose headers   connection: 'keep-alive',
+332 verbose headers   'x-served-by': 'cache-nrt6135-NRT',
+332 verbose headers   'x-cache': 'HIT',
+332 verbose headers   'x-cache-hits': '11',
+332 verbose headers   'x-timer': 'S1492088005.928976,VS0,VE0',
+332 verbose headers   vary: 'Accept-Encoding' }
+333 silly get cb [ 304,
+333 silly get   { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+333 silly get     via: '1.1 varnish',
+333 silly get     'cache-control': 'max-age=300',
+333 silly get     etag: 'W/"5818d2eb-226a"',
+333 silly get     age: '204',
+333 silly get     connection: 'keep-alive',
+333 silly get     'x-served-by': 'cache-nrt6135-NRT',
+333 silly get     'x-cache': 'HIT',
+333 silly get     'x-cache-hits': '11',
+333 silly get     'x-timer': 'S1492088005.928976,VS0,VE0',
+333 silly get     vary: 'Accept-Encoding' } ]
+334 verbose etag https://registry.npmjs.org/isarray from cache
+335 verbose get saving isarray to /root/.npm/registry.npmjs.org/isarray/.cache.json
+336 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+337 verbose get https://registry.npmjs.org/buffer-shims not expired, no request
+338 silly addNameRange number 2 { name: 'buffer-shims', range: '>=1.0.0 <1.1.0', hasData: true }
+339 silly addNameRange versions [ 'buffer-shims', [ '1.0.0' ] ]
+340 silly addNamed buffer-shims@1.0.0
+341 verbose addNamed "1.0.0" is a plain semver version for buffer-shims
+342 http 304 https://registry.npmjs.org/util-deprecate
+343 verbose headers { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+343 verbose headers   via: '1.1 varnish',
+343 verbose headers   'cache-control': 'max-age=300',
+343 verbose headers   etag: 'W/"5818e34b-16d9"',
+343 verbose headers   age: '97',
+343 verbose headers   connection: 'keep-alive',
+343 verbose headers   'x-served-by': 'cache-nrt6130-NRT',
+343 verbose headers   'x-cache': 'HIT',
+343 verbose headers   'x-cache-hits': '2',
+343 verbose headers   'x-timer': 'S1492088005.938775,VS0,VE0',
+343 verbose headers   vary: 'Accept-Encoding' }
+344 silly get cb [ 304,
+344 silly get   { date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+344 silly get     via: '1.1 varnish',
+344 silly get     'cache-control': 'max-age=300',
+344 silly get     etag: 'W/"5818e34b-16d9"',
+344 silly get     age: '97',
+344 silly get     connection: 'keep-alive',
+344 silly get     'x-served-by': 'cache-nrt6130-NRT',
+344 silly get     'x-cache': 'HIT',
+344 silly get     'x-cache-hits': '2',
+344 silly get     'x-timer': 'S1492088005.938775,VS0,VE0',
+344 silly get     vary: 'Accept-Encoding' } ]
+345 verbose etag https://registry.npmjs.org/util-deprecate from cache
+346 verbose get saving util-deprecate to /root/.npm/registry.npmjs.org/util-deprecate/.cache.json
+347 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+348 verbose get https://registry.npmjs.org/process-nextick-args not expired, no request
+349 silly addNameRange number 2 { name: 'process-nextick-args',
+349 silly addNameRange   range: '>=1.0.6 <1.1.0',
+349 silly addNameRange   hasData: true }
+350 silly addNameRange versions [ 'process-nextick-args',
+350 silly addNameRange   [ '1.0.0',
+350 silly addNameRange     '1.0.1',
+350 silly addNameRange     '1.0.2',
+350 silly addNameRange     '1.0.3',
+350 silly addNameRange     '1.0.4',
+350 silly addNameRange     '1.0.5',
+350 silly addNameRange     '1.0.6',
+350 silly addNameRange     '1.0.7' ] ]
+351 silly addNamed process-nextick-args@1.0.7
+352 verbose addNamed "1.0.7" is a plain semver version for process-nextick-args
+353 http 200 https://registry.npmjs.org/core-util-is
+354 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+354 verbose headers   'content-type': 'application/json',
+354 verbose headers   'last-modified': 'Wed, 01 Mar 2017 06:11:08 GMT',
+354 verbose headers   'content-encoding': 'gzip',
+354 verbose headers   'cache-control': 'max-age=300',
+354 verbose headers   'content-length': '964',
+354 verbose headers   'accept-ranges': 'bytes',
+354 verbose headers   date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+354 verbose headers   via: '1.1 varnish',
+354 verbose headers   age: '135',
+354 verbose headers   connection: 'keep-alive',
+354 verbose headers   'x-served-by': 'cache-nrt6128-NRT',
+354 verbose headers   'x-cache': 'HIT',
+354 verbose headers   'x-cache-hits': '5',
+354 verbose headers   'x-timer': 'S1492088005.929331,VS0,VE0',
+354 verbose headers   vary: 'Accept-Encoding' }
+355 silly get cb [ 200,
+355 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+355 silly get     'content-type': 'application/json',
+355 silly get     'last-modified': 'Wed, 01 Mar 2017 06:11:08 GMT',
+355 silly get     'content-encoding': 'gzip',
+355 silly get     'cache-control': 'max-age=300',
+355 silly get     'content-length': '964',
+355 silly get     'accept-ranges': 'bytes',
+355 silly get     date: 'Thu, 13 Apr 2017 12:53:24 GMT',
+355 silly get     via: '1.1 varnish',
+355 silly get     age: '135',
+355 silly get     connection: 'keep-alive',
+355 silly get     'x-served-by': 'cache-nrt6128-NRT',
+355 silly get     'x-cache': 'HIT',
+355 silly get     'x-cache-hits': '5',
+355 silly get     'x-timer': 'S1492088005.929331,VS0,VE0',
+355 silly get     vary: 'Accept-Encoding' } ]
+356 verbose get saving core-util-is to /root/.npm/registry.npmjs.org/core-util-is/.cache.json
+357 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+358 silly cache afterAdd buffer-shims@1.0.0
+359 verbose afterAdd /root/.npm/buffer-shims/1.0.0/package/package.json not in flight; writing
+360 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+361 silly cache afterAdd process-nextick-args@1.0.7
+362 verbose afterAdd /root/.npm/process-nextick-args/1.0.7/package/package.json not in flight; writing
+363 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+364 silly resolveWithNewModule string_decoder@1.0.0 checking installable status
+365 silly cache add args [ 'string_decoder@~1.0.0', null ]
+366 verbose cache add spec string_decoder@~1.0.0
+367 silly cache add parsed spec Result {
+367 silly cache add   raw: 'string_decoder@~1.0.0',
+367 silly cache add   scope: null,
+367 silly cache add   escapedName: 'string_decoder',
+367 silly cache add   name: 'string_decoder',
+367 silly cache add   rawSpec: '~1.0.0',
+367 silly cache add   spec: '>=1.0.0 <1.1.0',
+367 silly cache add   type: 'range' }
+368 silly addNamed string_decoder@>=1.0.0 <1.1.0
+369 verbose addNamed ">=1.0.0 <1.1.0" is a valid semver range for string_decoder
+370 silly addNameRange { name: 'string_decoder',
+370 silly addNameRange   range: '>=1.0.0 <1.1.0',
+370 silly addNameRange   hasData: false }
+371 silly mapToRegistry name string_decoder
+372 silly mapToRegistry using default registry
+373 silly mapToRegistry registry https://registry.npmjs.org/
+374 silly mapToRegistry data Result {
+374 silly mapToRegistry   raw: 'string_decoder',
+374 silly mapToRegistry   scope: null,
+374 silly mapToRegistry   escapedName: 'string_decoder',
+374 silly mapToRegistry   name: 'string_decoder',
+374 silly mapToRegistry   rawSpec: '',
+374 silly mapToRegistry   spec: 'latest',
+374 silly mapToRegistry   type: 'tag' }
+375 silly mapToRegistry uri https://registry.npmjs.org/string_decoder
+376 verbose addNameRange registry:https://registry.npmjs.org/string_decoder not in flight; fetching
+377 silly resolveWithNewModule isarray@1.0.0 checking installable status
+378 silly cache add args [ 'isarray@~1.0.0', null ]
+379 verbose cache add spec isarray@~1.0.0
+380 silly cache add parsed spec Result {
+380 silly cache add   raw: 'isarray@~1.0.0',
+380 silly cache add   scope: null,
+380 silly cache add   escapedName: 'isarray',
+380 silly cache add   name: 'isarray',
+380 silly cache add   rawSpec: '~1.0.0',
+380 silly cache add   spec: '>=1.0.0 <1.1.0',
+380 silly cache add   type: 'range' }
+381 silly addNamed isarray@>=1.0.0 <1.1.0
+382 verbose addNamed ">=1.0.0 <1.1.0" is a valid semver range for isarray
+383 silly addNameRange { name: 'isarray', range: '>=1.0.0 <1.1.0', hasData: false }
+384 silly mapToRegistry name isarray
+385 silly mapToRegistry using default registry
+386 silly mapToRegistry registry https://registry.npmjs.org/
+387 silly mapToRegistry data Result {
+387 silly mapToRegistry   raw: 'isarray',
+387 silly mapToRegistry   scope: null,
+387 silly mapToRegistry   escapedName: 'isarray',
+387 silly mapToRegistry   name: 'isarray',
+387 silly mapToRegistry   rawSpec: '',
+387 silly mapToRegistry   spec: 'latest',
+387 silly mapToRegistry   type: 'tag' }
+388 silly mapToRegistry uri https://registry.npmjs.org/isarray
+389 verbose addNameRange registry:https://registry.npmjs.org/isarray not in flight; fetching
+390 silly resolveWithNewModule util-deprecate@1.0.2 checking installable status
+391 silly cache add args [ 'util-deprecate@~1.0.1', null ]
+392 verbose cache add spec util-deprecate@~1.0.1
+393 silly cache add parsed spec Result {
+393 silly cache add   raw: 'util-deprecate@~1.0.1',
+393 silly cache add   scope: null,
+393 silly cache add   escapedName: 'util-deprecate',
+393 silly cache add   name: 'util-deprecate',
+393 silly cache add   rawSpec: '~1.0.1',
+393 silly cache add   spec: '>=1.0.1 <1.1.0',
+393 silly cache add   type: 'range' }
+394 silly addNamed util-deprecate@>=1.0.1 <1.1.0
+395 verbose addNamed ">=1.0.1 <1.1.0" is a valid semver range for util-deprecate
+396 silly addNameRange { name: 'util-deprecate',
+396 silly addNameRange   range: '>=1.0.1 <1.1.0',
+396 silly addNameRange   hasData: false }
+397 silly mapToRegistry name util-deprecate
+398 silly mapToRegistry using default registry
+399 silly mapToRegistry registry https://registry.npmjs.org/
+400 silly mapToRegistry data Result {
+400 silly mapToRegistry   raw: 'util-deprecate',
+400 silly mapToRegistry   scope: null,
+400 silly mapToRegistry   escapedName: 'util-deprecate',
+400 silly mapToRegistry   name: 'util-deprecate',
+400 silly mapToRegistry   rawSpec: '',
+400 silly mapToRegistry   spec: 'latest',
+400 silly mapToRegistry   type: 'tag' }
+401 silly mapToRegistry uri https://registry.npmjs.org/util-deprecate
+402 verbose addNameRange registry:https://registry.npmjs.org/util-deprecate not in flight; fetching
+403 verbose afterAdd /root/.npm/buffer-shims/1.0.0/package/package.json written
+404 silly resolveWithNewModule core-util-is@1.0.2 checking installable status
+405 silly cache add args [ 'core-util-is@~1.0.0', null ]
+406 verbose cache add spec core-util-is@~1.0.0
+407 silly cache add parsed spec Result {
+407 silly cache add   raw: 'core-util-is@~1.0.0',
+407 silly cache add   scope: null,
+407 silly cache add   escapedName: 'core-util-is',
+407 silly cache add   name: 'core-util-is',
+407 silly cache add   rawSpec: '~1.0.0',
+407 silly cache add   spec: '>=1.0.0 <1.1.0',
+407 silly cache add   type: 'range' }
+408 silly addNamed core-util-is@>=1.0.0 <1.1.0
+409 verbose addNamed ">=1.0.0 <1.1.0" is a valid semver range for core-util-is
+410 silly addNameRange { name: 'core-util-is', range: '>=1.0.0 <1.1.0', hasData: false }
+411 silly mapToRegistry name core-util-is
+412 silly mapToRegistry using default registry
+413 silly mapToRegistry registry https://registry.npmjs.org/
+414 silly mapToRegistry data Result {
+414 silly mapToRegistry   raw: 'core-util-is',
+414 silly mapToRegistry   scope: null,
+414 silly mapToRegistry   escapedName: 'core-util-is',
+414 silly mapToRegistry   name: 'core-util-is',
+414 silly mapToRegistry   rawSpec: '',
+414 silly mapToRegistry   spec: 'latest',
+414 silly mapToRegistry   type: 'tag' }
+415 silly mapToRegistry uri https://registry.npmjs.org/core-util-is
+416 verbose addNameRange registry:https://registry.npmjs.org/core-util-is not in flight; fetching
+417 verbose get https://registry.npmjs.org/string_decoder not expired, no request
+418 silly addNameRange number 2 { name: 'string_decoder',
+418 silly addNameRange   range: '>=1.0.0 <1.1.0',
+418 silly addNameRange   hasData: true }
+419 silly addNameRange versions [ 'string_decoder',
+419 silly addNameRange   [ '0.0.0',
+419 silly addNameRange     '0.0.1',
+419 silly addNameRange     '0.10.24',
+419 silly addNameRange     '0.11.10',
+419 silly addNameRange     '0.10.25',
+419 silly addNameRange     '0.11.10-1',
+419 silly addNameRange     '0.10.25-1',
+419 silly addNameRange     '0.10.31',
+419 silly addNameRange     '1.0.0' ] ]
+420 silly addNamed string_decoder@1.0.0
+421 verbose addNamed "1.0.0" is a plain semver version for string_decoder
+422 verbose afterAdd /root/.npm/process-nextick-args/1.0.7/package/package.json written
+423 verbose get https://registry.npmjs.org/isarray not expired, no request
+424 silly addNameRange number 2 { name: 'isarray', range: '>=1.0.0 <1.1.0', hasData: true }
+425 silly addNameRange versions [ 'isarray', [ '0.0.0', '0.0.1', '1.0.0', '2.0.0', '2.0.1' ] ]
+426 silly addNamed isarray@1.0.0
+427 verbose addNamed "1.0.0" is a plain semver version for isarray
+428 verbose get https://registry.npmjs.org/util-deprecate not expired, no request
+429 silly addNameRange number 2 { name: 'util-deprecate',
+429 silly addNameRange   range: '>=1.0.1 <1.1.0',
+429 silly addNameRange   hasData: true }
+430 silly addNameRange versions [ 'util-deprecate', [ '1.0.0', '1.0.1', '1.0.2' ] ]
+431 silly addNamed util-deprecate@1.0.2
+432 verbose addNamed "1.0.2" is a plain semver version for util-deprecate
+433 verbose get https://registry.npmjs.org/core-util-is not expired, no request
+434 silly addNameRange number 2 { name: 'core-util-is', range: '>=1.0.0 <1.1.0', hasData: true }
+435 silly addNameRange versions [ 'core-util-is', [ '1.0.0', '1.0.1', '1.0.2' ] ]
+436 silly addNamed core-util-is@1.0.2
+437 verbose addNamed "1.0.2" is a plain semver version for core-util-is
+438 silly cache afterAdd string_decoder@1.0.0
+439 verbose afterAdd /root/.npm/string_decoder/1.0.0/package/package.json not in flight; writing
+440 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+441 silly cache afterAdd isarray@1.0.0
+442 verbose afterAdd /root/.npm/isarray/1.0.0/package/package.json not in flight; writing
+443 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+444 silly cache afterAdd util-deprecate@1.0.2
+445 verbose afterAdd /root/.npm/util-deprecate/1.0.2/package/package.json not in flight; writing
+446 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+447 silly cache afterAdd core-util-is@1.0.2
+448 verbose afterAdd /root/.npm/core-util-is/1.0.2/package/package.json not in flight; writing
+449 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+450 verbose afterAdd /root/.npm/string_decoder/1.0.0/package/package.json written
+451 verbose afterAdd /root/.npm/isarray/1.0.0/package/package.json written
+452 verbose afterAdd /root/.npm/util-deprecate/1.0.2/package/package.json written
+453 verbose afterAdd /root/.npm/core-util-is/1.0.2/package/package.json written
+454 silly loadAllDepsIntoIdealTree Finishing
+455 silly loadIdealTree Finishing
+456 silly currentTree okeyserver@1.0.0
+456 silly currentTree ├── accepts@1.3.3
+456 silly currentTree ├── array-flatten@1.1.1
+456 silly currentTree ├── content-disposition@0.5.2
+456 silly currentTree ├── content-type@1.0.2
+456 silly currentTree ├── cookie-signature@1.0.6
+456 silly currentTree ├── cookie@0.3.1
+456 silly currentTree ├── debug@2.6.1
+456 silly currentTree ├── depd@1.1.0
+456 silly currentTree ├── destroy@1.0.4
+456 silly currentTree ├── ee-first@1.1.1
+456 silly currentTree ├── encodeurl@1.0.1
+456 silly currentTree ├── escape-html@1.0.3
+456 silly currentTree ├── etag@1.8.0
+456 silly currentTree ├── express@4.15.2
+456 silly currentTree ├─┬ finalhandler@1.0.1
+456 silly currentTree │ └── debug@2.6.3
+456 silly currentTree ├── forwarded@0.1.0
+456 silly currentTree ├── fresh@0.5.0
+456 silly currentTree ├── http-errors@1.6.1
+456 silly currentTree ├── inherits@2.0.3
+456 silly currentTree ├── ipaddr.js@1.3.0
+456 silly currentTree ├── media-typer@0.3.0
+456 silly currentTree ├── merge-descriptors@1.0.1
+456 silly currentTree ├── methods@1.1.2
+456 silly currentTree ├── mime-db@1.27.0
+456 silly currentTree ├── mime-types@2.1.15
+456 silly currentTree ├── mime@1.3.4
+456 silly currentTree ├── ms@0.7.2
+456 silly currentTree ├── negotiator@0.6.1
+456 silly currentTree ├── node-json-rpc@0.0.1
+456 silly currentTree ├── on-finished@2.3.0
+456 silly currentTree ├── parseurl@1.3.1
+456 silly currentTree ├── path-to-regexp@0.1.7
+456 silly currentTree ├── proxy-addr@1.1.4
+456 silly currentTree ├── python-shell@0.4.0
+456 silly currentTree ├── qs@6.4.0
+456 silly currentTree ├── range-parser@1.2.0
+456 silly currentTree ├── send@0.15.1
+456 silly currentTree ├── serve-static@1.12.1
+456 silly currentTree ├── setprototypeof@1.0.3
+456 silly currentTree ├── statuses@1.3.1
+456 silly currentTree ├── type-is@1.6.15
+456 silly currentTree ├── unpipe@1.0.0
+456 silly currentTree ├── utils-merge@1.0.0
+456 silly currentTree └── vary@1.1.1
+457 silly idealTree okeyserver@1.0.0
+457 silly idealTree ├── accepts@1.3.3
+457 silly idealTree ├── array-flatten@1.1.1
+457 silly idealTree ├── buffer-shims@1.0.0
+457 silly idealTree ├── concat-stream@1.6.0
+457 silly idealTree ├── content-disposition@0.5.2
+457 silly idealTree ├── content-type@1.0.2
+457 silly idealTree ├── cookie-signature@1.0.6
+457 silly idealTree ├── cookie@0.3.1
+457 silly idealTree ├── core-util-is@1.0.2
+457 silly idealTree ├── debug@2.6.1
+457 silly idealTree ├── depd@1.1.0
+457 silly idealTree ├── destroy@1.0.4
+457 silly idealTree ├── ee-first@1.1.1
+457 silly idealTree ├── encodeurl@1.0.1
+457 silly idealTree ├── escape-html@1.0.3
+457 silly idealTree ├── etag@1.8.0
+457 silly idealTree ├── express@4.15.2
+457 silly idealTree ├─┬ finalhandler@1.0.1
+457 silly idealTree │ └── debug@2.6.3
+457 silly idealTree ├── forwarded@0.1.0
+457 silly idealTree ├── fresh@0.5.0
+457 silly idealTree ├── http-errors@1.6.1
+457 silly idealTree ├── inherits@2.0.3
+457 silly idealTree ├── ipaddr.js@1.3.0
+457 silly idealTree ├── isarray@1.0.0
+457 silly idealTree ├── media-typer@0.3.0
+457 silly idealTree ├── merge-descriptors@1.0.1
+457 silly idealTree ├── methods@1.1.2
+457 silly idealTree ├── mime-db@1.27.0
+457 silly idealTree ├── mime-types@2.1.15
+457 silly idealTree ├── mime@1.3.4
+457 silly idealTree ├── ms@0.7.2
+457 silly idealTree ├── negotiator@0.6.1
+457 silly idealTree ├── node-json-rpc@0.0.1
+457 silly idealTree ├── on-finished@2.3.0
+457 silly idealTree ├── os-shim@0.1.3
+457 silly idealTree ├── parseurl@1.3.1
+457 silly idealTree ├── path-to-regexp@0.1.7
+457 silly idealTree ├── process-nextick-args@1.0.7
+457 silly idealTree ├── proxy-addr@1.1.4
+457 silly idealTree ├── python-shell@0.4.0
+457 silly idealTree ├── qs@6.4.0
+457 silly idealTree ├── range-parser@1.2.0
+457 silly idealTree ├── readable-stream@2.2.9
+457 silly idealTree ├── send@0.15.1
+457 silly idealTree ├── serve-static@1.12.1
+457 silly idealTree ├── setprototypeof@1.0.3
+457 silly idealTree ├── spawn-sync@1.0.15
+457 silly idealTree ├── statuses@1.3.1
+457 silly idealTree ├── string_decoder@1.0.0
+457 silly idealTree ├── type-is@1.6.15
+457 silly idealTree ├── typedarray@0.0.6
+457 silly idealTree ├── unpipe@1.0.0
+457 silly idealTree ├── util-deprecate@1.0.2
+457 silly idealTree ├── utils-merge@1.0.0
+457 silly idealTree └── vary@1.1.1
+458 silly generateActionsToTake Starting
+459 silly install generateActionsToTake
+460 silly generateActionsToTake Finishing
+461 silly diffTrees action count 11
+462 silly diffTrees add buffer-shims@1.0.0
+463 silly diffTrees add core-util-is@1.0.2
+464 silly diffTrees add isarray@1.0.0
+465 silly diffTrees add process-nextick-args@1.0.7
+466 silly diffTrees add string_decoder@1.0.0
+467 silly diffTrees add typedarray@0.0.6
+468 silly diffTrees add util-deprecate@1.0.2
+469 silly diffTrees add readable-stream@2.2.9
+470 silly diffTrees add concat-stream@1.6.0
+471 silly diffTrees add os-shim@0.1.3
+472 silly diffTrees add spawn-sync@1.0.15
+473 silly decomposeActions action count 88
+474 silly decomposeActions fetch buffer-shims@1.0.0
+475 silly decomposeActions extract buffer-shims@1.0.0
+476 silly decomposeActions test buffer-shims@1.0.0
+477 silly decomposeActions preinstall buffer-shims@1.0.0
+478 silly decomposeActions build buffer-shims@1.0.0
+479 silly decomposeActions install buffer-shims@1.0.0
+480 silly decomposeActions postinstall buffer-shims@1.0.0
+481 silly decomposeActions finalize buffer-shims@1.0.0
+482 silly decomposeActions fetch core-util-is@1.0.2
+483 silly decomposeActions extract core-util-is@1.0.2
+484 silly decomposeActions test core-util-is@1.0.2
+485 silly decomposeActions preinstall core-util-is@1.0.2
+486 silly decomposeActions build core-util-is@1.0.2
+487 silly decomposeActions install core-util-is@1.0.2
+488 silly decomposeActions postinstall core-util-is@1.0.2
+489 silly decomposeActions finalize core-util-is@1.0.2
+490 silly decomposeActions fetch isarray@1.0.0
+491 silly decomposeActions extract isarray@1.0.0
+492 silly decomposeActions test isarray@1.0.0
+493 silly decomposeActions preinstall isarray@1.0.0
+494 silly decomposeActions build isarray@1.0.0
+495 silly decomposeActions install isarray@1.0.0
+496 silly decomposeActions postinstall isarray@1.0.0
+497 silly decomposeActions finalize isarray@1.0.0
+498 silly decomposeActions fetch process-nextick-args@1.0.7
+499 silly decomposeActions extract process-nextick-args@1.0.7
+500 silly decomposeActions test process-nextick-args@1.0.7
+501 silly decomposeActions preinstall process-nextick-args@1.0.7
+502 silly decomposeActions build process-nextick-args@1.0.7
+503 silly decomposeActions install process-nextick-args@1.0.7
+504 silly decomposeActions postinstall process-nextick-args@1.0.7
+505 silly decomposeActions finalize process-nextick-args@1.0.7
+506 silly decomposeActions fetch string_decoder@1.0.0
+507 silly decomposeActions extract string_decoder@1.0.0
+508 silly decomposeActions test string_decoder@1.0.0
+509 silly decomposeActions preinstall string_decoder@1.0.0
+510 silly decomposeActions build string_decoder@1.0.0
+511 silly decomposeActions install string_decoder@1.0.0
+512 silly decomposeActions postinstall string_decoder@1.0.0
+513 silly decomposeActions finalize string_decoder@1.0.0
+514 silly decomposeActions fetch typedarray@0.0.6
+515 silly decomposeActions extract typedarray@0.0.6
+516 silly decomposeActions test typedarray@0.0.6
+517 silly decomposeActions preinstall typedarray@0.0.6
+518 silly decomposeActions build typedarray@0.0.6
+519 silly decomposeActions install typedarray@0.0.6
+520 silly decomposeActions postinstall typedarray@0.0.6
+521 silly decomposeActions finalize typedarray@0.0.6
+522 silly decomposeActions fetch util-deprecate@1.0.2
+523 silly decomposeActions extract util-deprecate@1.0.2
+524 silly decomposeActions test util-deprecate@1.0.2
+525 silly decomposeActions preinstall util-deprecate@1.0.2
+526 silly decomposeActions build util-deprecate@1.0.2
+527 silly decomposeActions install util-deprecate@1.0.2
+528 silly decomposeActions postinstall util-deprecate@1.0.2
+529 silly decomposeActions finalize util-deprecate@1.0.2
+530 silly decomposeActions fetch readable-stream@2.2.9
+531 silly decomposeActions extract readable-stream@2.2.9
+532 silly decomposeActions test readable-stream@2.2.9
+533 silly decomposeActions preinstall readable-stream@2.2.9
+534 silly decomposeActions build readable-stream@2.2.9
+535 silly decomposeActions install readable-stream@2.2.9
+536 silly decomposeActions postinstall readable-stream@2.2.9
+537 silly decomposeActions finalize readable-stream@2.2.9
+538 silly decomposeActions fetch concat-stream@1.6.0
+539 silly decomposeActions extract concat-stream@1.6.0
+540 silly decomposeActions test concat-stream@1.6.0
+541 silly decomposeActions preinstall concat-stream@1.6.0
+542 silly decomposeActions build concat-stream@1.6.0
+543 silly decomposeActions install concat-stream@1.6.0
+544 silly decomposeActions postinstall concat-stream@1.6.0
+545 silly decomposeActions finalize concat-stream@1.6.0
+546 silly decomposeActions fetch os-shim@0.1.3
+547 silly decomposeActions extract os-shim@0.1.3
+548 silly decomposeActions test os-shim@0.1.3
+549 silly decomposeActions preinstall os-shim@0.1.3
+550 silly decomposeActions build os-shim@0.1.3
+551 silly decomposeActions install os-shim@0.1.3
+552 silly decomposeActions postinstall os-shim@0.1.3
+553 silly decomposeActions finalize os-shim@0.1.3
+554 silly decomposeActions fetch spawn-sync@1.0.15
+555 silly decomposeActions extract spawn-sync@1.0.15
+556 silly decomposeActions test spawn-sync@1.0.15
+557 silly decomposeActions preinstall spawn-sync@1.0.15
+558 silly decomposeActions build spawn-sync@1.0.15
+559 silly decomposeActions install spawn-sync@1.0.15
+560 silly decomposeActions postinstall spawn-sync@1.0.15
+561 silly decomposeActions finalize spawn-sync@1.0.15
+562 silly runTopLevelLifecycles Starting
+563 silly executeActions Starting
+564 silly install executeActions
+565 silly doSerial global-install 0
+566 silly doParallel fetch 11
+567 verbose correctMkdir /root/.npm/_locks correctMkdir not in flight; initializing
+568 verbose lock using /root/.npm/_locks/staging-9c2c560f48b49c1e.lock for /root/Okey_server/node_modules/.staging
+569 silly doParallel extract 11
+570 silly extract buffer-shims@1.0.0
+571 silly extract core-util-is@1.0.2
+572 silly extract isarray@1.0.0
+573 silly extract process-nextick-args@1.0.7
+574 silly extract string_decoder@1.0.0
+575 silly extract typedarray@0.0.6
+576 silly extract util-deprecate@1.0.2
+577 silly extract readable-stream@2.2.9
+578 silly extract concat-stream@1.6.0
+579 silly extract os-shim@0.1.3
+580 silly extract spawn-sync@1.0.15
+581 verbose unbuild node_modules/.staging/buffer-shims-dfc2fe80
+582 verbose unbuild node_modules/.staging/core-util-is-a01b2f0a
+583 verbose unbuild node_modules/.staging/isarray-6cabef2e
+584 verbose unbuild node_modules/.staging/process-nextick-args-10f975f6
+585 verbose unbuild node_modules/.staging/typedarray-a0e4fc1a
+586 verbose unbuild node_modules/.staging/string_decoder-1884f95c
+587 verbose unbuild node_modules/.staging/util-deprecate-17511ffd
+588 verbose unbuild node_modules/.staging/readable-stream-0f210547
+589 verbose unbuild node_modules/.staging/concat-stream-a69d75b0
+590 verbose unbuild node_modules/.staging/os-shim-5a12b624
+591 verbose unbuild node_modules/.staging/spawn-sync-63ec5a91
+592 silly gentlyRm /root/Okey_server/node_modules/.staging/buffer-shims-dfc2fe80 is being purged from base /root/Okey_server
+593 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/buffer-shims-dfc2fe80
+594 silly gentlyRm /root/Okey_server/node_modules/.staging/core-util-is-a01b2f0a is being purged from base /root/Okey_server
+595 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/core-util-is-a01b2f0a
+596 silly gentlyRm /root/Okey_server/node_modules/.staging/isarray-6cabef2e is being purged from base /root/Okey_server
+597 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/isarray-6cabef2e
+598 silly gentlyRm /root/Okey_server/node_modules/.staging/process-nextick-args-10f975f6 is being purged from base /root/Okey_server
+599 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/process-nextick-args-10f975f6
+600 silly gentlyRm /root/Okey_server/node_modules/.staging/typedarray-a0e4fc1a is being purged from base /root/Okey_server
+601 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/typedarray-a0e4fc1a
+602 silly gentlyRm /root/Okey_server/node_modules/.staging/string_decoder-1884f95c is being purged from base /root/Okey_server
+603 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/string_decoder-1884f95c
+604 silly gentlyRm /root/Okey_server/node_modules/.staging/util-deprecate-17511ffd is being purged from base /root/Okey_server
+605 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/util-deprecate-17511ffd
+606 silly gentlyRm /root/Okey_server/node_modules/.staging/readable-stream-0f210547 is being purged from base /root/Okey_server
+607 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/readable-stream-0f210547
+608 silly gentlyRm /root/Okey_server/node_modules/.staging/concat-stream-a69d75b0 is being purged from base /root/Okey_server
+609 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/concat-stream-a69d75b0
+610 silly gentlyRm /root/Okey_server/node_modules/.staging/os-shim-5a12b624 is being purged from base /root/Okey_server
+611 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/os-shim-5a12b624
+612 silly gentlyRm /root/Okey_server/node_modules/.staging/spawn-sync-63ec5a91 is being purged from base /root/Okey_server
+613 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/spawn-sync-63ec5a91
+614 verbose tar unpack /root/.npm/buffer-shims/1.0.0/package.tgz
+615 verbose tar unpacking to /root/Okey_server/node_modules/.staging/buffer-shims-dfc2fe80
+616 silly gentlyRm /root/Okey_server/node_modules/.staging/buffer-shims-dfc2fe80 is being purged
+617 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/buffer-shims-dfc2fe80
+618 verbose tar unpack /root/.npm/core-util-is/1.0.2/package.tgz
+619 verbose tar unpacking to /root/Okey_server/node_modules/.staging/core-util-is-a01b2f0a
+620 silly gentlyRm /root/Okey_server/node_modules/.staging/core-util-is-a01b2f0a is being purged
+621 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/core-util-is-a01b2f0a
+622 verbose tar unpack /root/.npm/isarray/1.0.0/package.tgz
+623 verbose tar unpacking to /root/Okey_server/node_modules/.staging/isarray-6cabef2e
+624 silly gentlyRm /root/Okey_server/node_modules/.staging/isarray-6cabef2e is being purged
+625 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/isarray-6cabef2e
+626 verbose tar unpack /root/.npm/process-nextick-args/1.0.7/package.tgz
+627 verbose tar unpacking to /root/Okey_server/node_modules/.staging/process-nextick-args-10f975f6
+628 silly gentlyRm /root/Okey_server/node_modules/.staging/process-nextick-args-10f975f6 is being purged
+629 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/process-nextick-args-10f975f6
+630 verbose tar unpack /root/.npm/typedarray/0.0.6/package.tgz
+631 verbose tar unpacking to /root/Okey_server/node_modules/.staging/typedarray-a0e4fc1a
+632 silly gentlyRm /root/Okey_server/node_modules/.staging/typedarray-a0e4fc1a is being purged
+633 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/typedarray-a0e4fc1a
+634 verbose tar unpack /root/.npm/string_decoder/1.0.0/package.tgz
+635 verbose tar unpacking to /root/Okey_server/node_modules/.staging/string_decoder-1884f95c
+636 silly gentlyRm /root/Okey_server/node_modules/.staging/string_decoder-1884f95c is being purged
+637 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/string_decoder-1884f95c
+638 verbose tar unpack /root/.npm/util-deprecate/1.0.2/package.tgz
+639 verbose tar unpacking to /root/Okey_server/node_modules/.staging/util-deprecate-17511ffd
+640 silly gentlyRm /root/Okey_server/node_modules/.staging/util-deprecate-17511ffd is being purged
+641 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/util-deprecate-17511ffd
+642 verbose tar unpack /root/.npm/readable-stream/2.2.9/package.tgz
+643 verbose tar unpacking to /root/Okey_server/node_modules/.staging/readable-stream-0f210547
+644 silly gentlyRm /root/Okey_server/node_modules/.staging/readable-stream-0f210547 is being purged
+645 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/readable-stream-0f210547
+646 verbose tar unpack /root/.npm/concat-stream/1.6.0/package.tgz
+647 verbose tar unpacking to /root/Okey_server/node_modules/.staging/concat-stream-a69d75b0
+648 silly gentlyRm /root/Okey_server/node_modules/.staging/concat-stream-a69d75b0 is being purged
+649 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/concat-stream-a69d75b0
+650 verbose tar unpack /root/.npm/os-shim/0.1.3/package.tgz
+651 verbose tar unpacking to /root/Okey_server/node_modules/.staging/os-shim-5a12b624
+652 silly gentlyRm /root/Okey_server/node_modules/.staging/os-shim-5a12b624 is being purged
+653 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/os-shim-5a12b624
+654 verbose tar unpack /root/.npm/spawn-sync/1.0.15/package.tgz
+655 verbose tar unpacking to /root/Okey_server/node_modules/.staging/spawn-sync-63ec5a91
+656 silly gentlyRm /root/Okey_server/node_modules/.staging/spawn-sync-63ec5a91 is being purged
+657 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/spawn-sync-63ec5a91
+658 silly gunzTarPerm modes [ '755', '644' ]
+659 silly gunzTarPerm modes [ '755', '644' ]
+660 silly gunzTarPerm modes [ '755', '644' ]
+661 silly gunzTarPerm modes [ '755', '644' ]
+662 silly gunzTarPerm modes [ '755', '644' ]
+663 silly gunzTarPerm modes [ '755', '644' ]
+664 silly gunzTarPerm modes [ '755', '644' ]
+665 silly gunzTarPerm modes [ '755', '644' ]
+666 silly gunzTarPerm modes [ '755', '644' ]
+667 silly gunzTarPerm modes [ '755', '644' ]
+668 silly gunzTarPerm modes [ '755', '644' ]
+669 silly gunzTarPerm extractEntry package.json
+670 silly gunzTarPerm extractEntry package.json
+671 silly gunzTarPerm extractEntry package.json
+672 silly gunzTarPerm extractEntry package.json
+673 silly gunzTarPerm extractEntry package.json
+674 silly gunzTarPerm extractEntry package.json
+675 silly gunzTarPerm extractEntry package.json
+676 silly gunzTarPerm extractEntry package.json
+677 silly gunzTarPerm extractEntry package.json
+678 silly gunzTarPerm extractEntry package.json
+679 silly gunzTarPerm extractEntry package.json
+680 silly gunzTarPerm extractEntry index.js
+681 silly gunzTarPerm extractEntry license.md
+682 silly gunzTarPerm extractEntry README.md
+683 silly gunzTarPerm extractEntry LICENSE
+684 silly gunzTarPerm extractEntry .npmignore
+685 silly gunzTarPerm extractEntry README.md
+686 silly gunzTarPerm extractEntry index.js
+687 silly gunzTarPerm extractEntry test.js
+688 silly gunzTarPerm extractEntry LICENSE
+689 silly gunzTarPerm extractEntry index.js
+690 silly gunzTarPerm extractEntry .npmignore
+691 silly gunzTarPerm extractEntry README.md
+692 silly gunzTarPerm extractEntry README.md
+693 silly gunzTarPerm extractEntry LICENSE
+694 silly gunzTarPerm extractEntry .npmignore
+695 silly gunzTarPerm extractEntry README.md
+696 silly gunzTarPerm extractEntry LICENSE
+697 silly gunzTarPerm extractEntry index.js
+698 silly gunzTarPerm extractEntry .npmignore
+699 silly gunzTarPerm extractEntry README.md
+700 silly gunzTarPerm extractEntry .npmignore
+701 silly gunzTarPerm extractEntry README.md
+702 silly gunzTarPerm extractEntry readme.md
+703 silly gunzTarPerm extractEntry test.js
+704 silly gunzTarPerm extractEntry float.patch
+705 silly gunzTarPerm extractEntry index.js
+706 silly gunzTarPerm extractEntry test.js
+707 silly gunzTarPerm extractEntry .travis.yml
+708 silly gunzTarPerm extractEntry license.md
+709 silly gunzTarPerm extractEntry .travis.yml
+710 silly gunzTarPerm extractEntry LICENSE
+711 silly gunzTarPerm extractEntry lib/string_decoder.js
+712 silly gunzTarPerm extractEntry browser.js
+713 silly gunzTarPerm extractEntry node.js
+714 silly gunzTarPerm extractEntry LICENSE
+715 silly gunzTarPerm extractEntry readable-browser.js
+716 silly gunzTarPerm extractEntry readme.md
+717 silly gunzTarPerm extractEntry LICENSE
+718 silly gunzTarPerm extractEntry .editorconfig
+719 silly gunzTarPerm extractEntry LICENSE
+720 silly gunzTarPerm extractEntry index.js
+721 silly gunzTarPerm extractEntry lib/util.js
+722 silly gunzTarPerm extractEntry .travis.yml
+723 silly gunzTarPerm extractEntry Makefile
+724 silly gunzTarPerm extractEntry writable-browser.js
+725 silly gunzTarPerm extractEntry readable.js
+726 silly gunzTarPerm extractEntry .travis.yml
+727 silly gunzTarPerm extractEntry Makefile
+728 silly gunzTarPerm extractEntry postinstall.js
+729 silly gunzTarPerm extractEntry lib/spawn-sync.js
+730 silly gunzTarPerm extractEntry readme.md
+731 silly gunzTarPerm extractEntry example/tarray.js
+732 silly gunzTarPerm extractEntry readme.markdown
+733 silly gunzTarPerm extractEntry test/tarray.js
+734 silly gunzTarPerm extractEntry History.md
+735 silly gunzTarPerm extractEntry test/server/undef_globals.js
+736 silly gunzTarPerm extractEntry component.json
+737 silly gunzTarPerm extractEntry passthrough.js
+738 silly gunzTarPerm extractEntry transform.js
+739 silly gunzTarPerm extractEntry lib/os.js
+740 silly gunzTarPerm extractEntry test/osSpec.js
+741 silly gunzTarPerm extractEntry lib/worker.js
+742 silly gunzTarPerm extractEntry lib/json-buffer/README.md
+743 silly gunzTarPerm extractEntry lib/json-buffer/LICENSE
+744 silly gunzTarPerm extractEntry lib/json-buffer/index.js
+745 silly gunzTarPerm extractEntry .travis.yml
+746 silly gunzTarPerm extractEntry appveyor.yml
+747 silly gunzTarPerm extractEntry test/index.js
+748 silly gunzTarPerm extractEntry test/test-empty.js
+749 silly gunzTarPerm extractEntry test/test-spawn-fail.js
+750 silly gunzTarPerm extractEntry test/test-spawn-timeout.js
+751 silly gunzTarPerm extractEntry test/test-spawn.js
+752 silly gunzTarPerm extractEntry duplex-browser.js
+753 silly gunzTarPerm extractEntry writable.js
+754 silly gunzTarPerm extractEntry duplex.js
+755 silly gunzTarPerm extractEntry GOVERNANCE.md
+756 silly gunzTarPerm extractEntry .travis.yml
+757 silly gunzTarPerm extractEntry doc/wg-meetings/2015-01-30.md
+758 silly gunzTarPerm extractEntry lib/_stream_duplex.js
+759 silly gunzTarPerm extractEntry lib/_stream_passthrough.js
+760 silly gunzTarPerm extractEntry lib/_stream_readable.js
+761 silly gunzTarPerm extractEntry lib/_stream_transform.js
+762 silly gunzTarPerm extractEntry lib/_stream_writable.js
+763 silly gunzTarPerm extractEntry lib/internal/streams/BufferList.js
+764 silly gunzTarPerm extractEntry lib/internal/streams/stream-browser.js
+765 silly gunzTarPerm extractEntry lib/internal/streams/stream.js
+766 silly gunzTarPerm extractEntry CONTRIBUTING.md
+767 silly gentlyRm /root/Okey_server/node_modules/.staging/buffer-shims-dfc2fe80/node_modules is being purged
+768 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/buffer-shims-dfc2fe80/node_modules
+769 silly gentlyRm /root/Okey_server/node_modules/.staging/concat-stream-a69d75b0/node_modules is being purged
+770 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/concat-stream-a69d75b0/node_modules
+771 silly gentlyRm /root/Okey_server/node_modules/.staging/string_decoder-1884f95c/node_modules is being purged
+772 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/string_decoder-1884f95c/node_modules
+773 silly gentlyRm /root/Okey_server/node_modules/.staging/process-nextick-args-10f975f6/node_modules is being purged
+774 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/process-nextick-args-10f975f6/node_modules
+775 silly gentlyRm /root/Okey_server/node_modules/.staging/util-deprecate-17511ffd/node_modules is being purged
+776 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/util-deprecate-17511ffd/node_modules
+777 silly gentlyRm /root/Okey_server/node_modules/.staging/core-util-is-a01b2f0a/node_modules is being purged
+778 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/core-util-is-a01b2f0a/node_modules
+779 silly gentlyRm /root/Okey_server/node_modules/.staging/isarray-6cabef2e/node_modules is being purged
+780 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/isarray-6cabef2e/node_modules
+781 silly gentlyRm /root/Okey_server/node_modules/.staging/typedarray-a0e4fc1a/node_modules is being purged
+782 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/typedarray-a0e4fc1a/node_modules
+783 silly gentlyRm /root/Okey_server/node_modules/.staging/os-shim-5a12b624/node_modules is being purged
+784 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/os-shim-5a12b624/node_modules
+785 silly gentlyRm /root/Okey_server/node_modules/.staging/spawn-sync-63ec5a91/node_modules is being purged
+786 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/spawn-sync-63ec5a91/node_modules
+787 silly gentlyRm /root/Okey_server/node_modules/.staging/readable-stream-0f210547/node_modules is being purged
+788 verbose gentlyRm don't care about contents; nuking /root/Okey_server/node_modules/.staging/readable-stream-0f210547/node_modules
+789 silly doParallel preinstall 11
+790 silly preinstall buffer-shims@1.0.0 /root/Okey_server/node_modules/.staging/buffer-shims-dfc2fe80
+791 info lifecycle buffer-shims@1.0.0~preinstall: buffer-shims@1.0.0
+792 silly preinstall core-util-is@1.0.2 /root/Okey_server/node_modules/.staging/core-util-is-a01b2f0a
+793 info lifecycle core-util-is@1.0.2~preinstall: core-util-is@1.0.2
+794 silly preinstall isarray@1.0.0 /root/Okey_server/node_modules/.staging/isarray-6cabef2e
+795 info lifecycle isarray@1.0.0~preinstall: isarray@1.0.0
+796 silly preinstall process-nextick-args@1.0.7 /root/Okey_server/node_modules/.staging/process-nextick-args-10f975f6
+797 info lifecycle process-nextick-args@1.0.7~preinstall: process-nextick-args@1.0.7
+798 silly preinstall string_decoder@1.0.0 /root/Okey_server/node_modules/.staging/string_decoder-1884f95c
+799 info lifecycle string_decoder@1.0.0~preinstall: string_decoder@1.0.0
+800 silly preinstall typedarray@0.0.6 /root/Okey_server/node_modules/.staging/typedarray-a0e4fc1a
+801 info lifecycle typedarray@0.0.6~preinstall: typedarray@0.0.6
+802 silly preinstall util-deprecate@1.0.2 /root/Okey_server/node_modules/.staging/util-deprecate-17511ffd
+803 info lifecycle util-deprecate@1.0.2~preinstall: util-deprecate@1.0.2
+804 silly preinstall readable-stream@2.2.9 /root/Okey_server/node_modules/.staging/readable-stream-0f210547
+805 info lifecycle readable-stream@2.2.9~preinstall: readable-stream@2.2.9
+806 silly preinstall concat-stream@1.6.0 /root/Okey_server/node_modules/.staging/concat-stream-a69d75b0
+807 info lifecycle concat-stream@1.6.0~preinstall: concat-stream@1.6.0
+808 silly preinstall os-shim@0.1.3 /root/Okey_server/node_modules/.staging/os-shim-5a12b624
+809 info lifecycle os-shim@0.1.3~preinstall: os-shim@0.1.3
+810 silly preinstall spawn-sync@1.0.15 /root/Okey_server/node_modules/.staging/spawn-sync-63ec5a91
+811 info lifecycle spawn-sync@1.0.15~preinstall: spawn-sync@1.0.15
+812 silly lifecycle buffer-shims@1.0.0~preinstall: no script for preinstall, continuing
+813 silly lifecycle core-util-is@1.0.2~preinstall: no script for preinstall, continuing
+814 silly lifecycle isarray@1.0.0~preinstall: no script for preinstall, continuing
+815 silly lifecycle process-nextick-args@1.0.7~preinstall: no script for preinstall, continuing
+816 silly lifecycle string_decoder@1.0.0~preinstall: no script for preinstall, continuing
+817 silly lifecycle typedarray@0.0.6~preinstall: no script for preinstall, continuing
+818 silly lifecycle util-deprecate@1.0.2~preinstall: no script for preinstall, continuing
+819 silly lifecycle readable-stream@2.2.9~preinstall: no script for preinstall, continuing
+820 silly lifecycle concat-stream@1.6.0~preinstall: no script for preinstall, continuing
+821 silly lifecycle os-shim@0.1.3~preinstall: no script for preinstall, continuing
+822 silly lifecycle spawn-sync@1.0.15~preinstall: no script for preinstall, continuing
+823 silly doReverseSerial remove 0
+824 silly doSerial move 0
+825 silly doSerial finalize 11
+826 silly finalize /root/Okey_server/node_modules/buffer-shims
+827 silly finalize /root/Okey_server/node_modules/core-util-is
+828 silly finalize /root/Okey_server/node_modules/isarray
+829 silly finalize /root/Okey_server/node_modules/process-nextick-args
+830 silly finalize /root/Okey_server/node_modules/string_decoder
+831 silly finalize /root/Okey_server/node_modules/typedarray
+832 silly finalize /root/Okey_server/node_modules/util-deprecate
+833 silly finalize /root/Okey_server/node_modules/readable-stream
+834 silly finalize /root/Okey_server/node_modules/concat-stream
+835 silly finalize /root/Okey_server/node_modules/os-shim
+836 silly finalize /root/Okey_server/node_modules/spawn-sync
+837 silly doSerial build 11
+838 silly build buffer-shims@1.0.0
+839 info linkStuff buffer-shims@1.0.0
+840 silly linkStuff buffer-shims@1.0.0 has /root/Okey_server/node_modules as its parent node_modules
+841 verbose linkBins buffer-shims@1.0.0
+842 verbose linkMans buffer-shims@1.0.0
+843 silly build core-util-is@1.0.2
+844 info linkStuff core-util-is@1.0.2
+845 silly linkStuff core-util-is@1.0.2 has /root/Okey_server/node_modules as its parent node_modules
+846 verbose linkBins core-util-is@1.0.2
+847 verbose linkMans core-util-is@1.0.2
+848 silly build isarray@1.0.0
+849 info linkStuff isarray@1.0.0
+850 silly linkStuff isarray@1.0.0 has /root/Okey_server/node_modules as its parent node_modules
+851 verbose linkBins isarray@1.0.0
+852 verbose linkMans isarray@1.0.0
+853 silly build process-nextick-args@1.0.7
+854 info linkStuff process-nextick-args@1.0.7
+855 silly linkStuff process-nextick-args@1.0.7 has /root/Okey_server/node_modules as its parent node_modules
+856 verbose linkBins process-nextick-args@1.0.7
+857 verbose linkMans process-nextick-args@1.0.7
+858 silly build string_decoder@1.0.0
+859 info linkStuff string_decoder@1.0.0
+860 silly linkStuff string_decoder@1.0.0 has /root/Okey_server/node_modules as its parent node_modules
+861 verbose linkBins string_decoder@1.0.0
+862 verbose linkMans string_decoder@1.0.0
+863 silly build typedarray@0.0.6
+864 info linkStuff typedarray@0.0.6
+865 silly linkStuff typedarray@0.0.6 has /root/Okey_server/node_modules as its parent node_modules
+866 verbose linkBins typedarray@0.0.6
+867 verbose linkMans typedarray@0.0.6
+868 silly build util-deprecate@1.0.2
+869 info linkStuff util-deprecate@1.0.2
+870 silly linkStuff util-deprecate@1.0.2 has /root/Okey_server/node_modules as its parent node_modules
+871 verbose linkBins util-deprecate@1.0.2
+872 verbose linkMans util-deprecate@1.0.2
+873 silly build readable-stream@2.2.9
+874 info linkStuff readable-stream@2.2.9
+875 silly linkStuff readable-stream@2.2.9 has /root/Okey_server/node_modules as its parent node_modules
+876 verbose linkBins readable-stream@2.2.9
+877 verbose linkMans readable-stream@2.2.9
+878 silly build concat-stream@1.6.0
+879 info linkStuff concat-stream@1.6.0
+880 silly linkStuff concat-stream@1.6.0 has /root/Okey_server/node_modules as its parent node_modules
+881 verbose linkBins concat-stream@1.6.0
+882 verbose linkMans concat-stream@1.6.0
+883 silly build os-shim@0.1.3
+884 info linkStuff os-shim@0.1.3
+885 silly linkStuff os-shim@0.1.3 has /root/Okey_server/node_modules as its parent node_modules
+886 verbose linkBins os-shim@0.1.3
+887 verbose linkMans os-shim@0.1.3
+888 silly build spawn-sync@1.0.15
+889 info linkStuff spawn-sync@1.0.15
+890 silly linkStuff spawn-sync@1.0.15 has /root/Okey_server/node_modules as its parent node_modules
+891 verbose linkBins spawn-sync@1.0.15
+892 verbose linkMans spawn-sync@1.0.15
+893 silly doSerial global-link 0
+894 silly doParallel update-linked 0
+895 silly doSerial install 11
+896 silly install buffer-shims@1.0.0 /root/Okey_server/node_modules/.staging/buffer-shims-dfc2fe80
+897 info lifecycle buffer-shims@1.0.0~install: buffer-shims@1.0.0
+898 silly lifecycle buffer-shims@1.0.0~install: no script for install, continuing
+899 silly install core-util-is@1.0.2 /root/Okey_server/node_modules/.staging/core-util-is-a01b2f0a
+900 info lifecycle core-util-is@1.0.2~install: core-util-is@1.0.2
+901 silly lifecycle core-util-is@1.0.2~install: no script for install, continuing
+902 silly install isarray@1.0.0 /root/Okey_server/node_modules/.staging/isarray-6cabef2e
+903 info lifecycle isarray@1.0.0~install: isarray@1.0.0
+904 silly lifecycle isarray@1.0.0~install: no script for install, continuing
+905 silly install process-nextick-args@1.0.7 /root/Okey_server/node_modules/.staging/process-nextick-args-10f975f6
+906 info lifecycle process-nextick-args@1.0.7~install: process-nextick-args@1.0.7
+907 silly lifecycle process-nextick-args@1.0.7~install: no script for install, continuing
+908 silly install string_decoder@1.0.0 /root/Okey_server/node_modules/.staging/string_decoder-1884f95c
+909 info lifecycle string_decoder@1.0.0~install: string_decoder@1.0.0
+910 silly lifecycle string_decoder@1.0.0~install: no script for install, continuing
+911 silly install typedarray@0.0.6 /root/Okey_server/node_modules/.staging/typedarray-a0e4fc1a
+912 info lifecycle typedarray@0.0.6~install: typedarray@0.0.6
+913 silly lifecycle typedarray@0.0.6~install: no script for install, continuing
+914 silly install util-deprecate@1.0.2 /root/Okey_server/node_modules/.staging/util-deprecate-17511ffd
+915 info lifecycle util-deprecate@1.0.2~install: util-deprecate@1.0.2
+916 silly lifecycle util-deprecate@1.0.2~install: no script for install, continuing
+917 silly install readable-stream@2.2.9 /root/Okey_server/node_modules/.staging/readable-stream-0f210547
+918 info lifecycle readable-stream@2.2.9~install: readable-stream@2.2.9
+919 silly lifecycle readable-stream@2.2.9~install: no script for install, continuing
+920 silly install concat-stream@1.6.0 /root/Okey_server/node_modules/.staging/concat-stream-a69d75b0
+921 info lifecycle concat-stream@1.6.0~install: concat-stream@1.6.0
+922 silly lifecycle concat-stream@1.6.0~install: no script for install, continuing
+923 silly install os-shim@0.1.3 /root/Okey_server/node_modules/.staging/os-shim-5a12b624
+924 info lifecycle os-shim@0.1.3~install: os-shim@0.1.3
+925 silly lifecycle os-shim@0.1.3~install: no script for install, continuing
+926 silly install spawn-sync@1.0.15 /root/Okey_server/node_modules/.staging/spawn-sync-63ec5a91
+927 info lifecycle spawn-sync@1.0.15~install: spawn-sync@1.0.15
+928 silly lifecycle spawn-sync@1.0.15~install: no script for install, continuing
+929 silly doSerial postinstall 11
+930 silly postinstall buffer-shims@1.0.0 /root/Okey_server/node_modules/.staging/buffer-shims-dfc2fe80
+931 info lifecycle buffer-shims@1.0.0~postinstall: buffer-shims@1.0.0
+932 silly lifecycle buffer-shims@1.0.0~postinstall: no script for postinstall, continuing
+933 silly postinstall core-util-is@1.0.2 /root/Okey_server/node_modules/.staging/core-util-is-a01b2f0a
+934 info lifecycle core-util-is@1.0.2~postinstall: core-util-is@1.0.2
+935 silly lifecycle core-util-is@1.0.2~postinstall: no script for postinstall, continuing
+936 silly postinstall isarray@1.0.0 /root/Okey_server/node_modules/.staging/isarray-6cabef2e
+937 info lifecycle isarray@1.0.0~postinstall: isarray@1.0.0
+938 silly lifecycle isarray@1.0.0~postinstall: no script for postinstall, continuing
+939 silly postinstall process-nextick-args@1.0.7 /root/Okey_server/node_modules/.staging/process-nextick-args-10f975f6
+940 info lifecycle process-nextick-args@1.0.7~postinstall: process-nextick-args@1.0.7
+941 silly lifecycle process-nextick-args@1.0.7~postinstall: no script for postinstall, continuing
+942 silly postinstall string_decoder@1.0.0 /root/Okey_server/node_modules/.staging/string_decoder-1884f95c
+943 info lifecycle string_decoder@1.0.0~postinstall: string_decoder@1.0.0
+944 silly lifecycle string_decoder@1.0.0~postinstall: no script for postinstall, continuing
+945 silly postinstall typedarray@0.0.6 /root/Okey_server/node_modules/.staging/typedarray-a0e4fc1a
+946 info lifecycle typedarray@0.0.6~postinstall: typedarray@0.0.6
+947 silly lifecycle typedarray@0.0.6~postinstall: no script for postinstall, continuing
+948 silly postinstall util-deprecate@1.0.2 /root/Okey_server/node_modules/.staging/util-deprecate-17511ffd
+949 info lifecycle util-deprecate@1.0.2~postinstall: util-deprecate@1.0.2
+950 silly lifecycle util-deprecate@1.0.2~postinstall: no script for postinstall, continuing
+951 silly postinstall readable-stream@2.2.9 /root/Okey_server/node_modules/.staging/readable-stream-0f210547
+952 info lifecycle readable-stream@2.2.9~postinstall: readable-stream@2.2.9
+953 silly lifecycle readable-stream@2.2.9~postinstall: no script for postinstall, continuing
+954 silly postinstall concat-stream@1.6.0 /root/Okey_server/node_modules/.staging/concat-stream-a69d75b0
+955 info lifecycle concat-stream@1.6.0~postinstall: concat-stream@1.6.0
+956 silly lifecycle concat-stream@1.6.0~postinstall: no script for postinstall, continuing
+957 silly postinstall os-shim@0.1.3 /root/Okey_server/node_modules/.staging/os-shim-5a12b624
+958 info lifecycle os-shim@0.1.3~postinstall: os-shim@0.1.3
+959 silly lifecycle os-shim@0.1.3~postinstall: no script for postinstall, continuing
+960 silly postinstall spawn-sync@1.0.15 /root/Okey_server/node_modules/.staging/spawn-sync-63ec5a91
+961 info lifecycle spawn-sync@1.0.15~postinstall: spawn-sync@1.0.15
+962 verbose lifecycle spawn-sync@1.0.15~postinstall: unsafe-perm in lifecycle false
+963 verbose lifecycle spawn-sync@1.0.15~postinstall: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/root/Okey_server/node_modules/spawn-sync/node_modules/.bin:/root/Okey_server/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+964 verbose lifecycle spawn-sync@1.0.15~postinstall: CWD: /root/Okey_server/node_modules/spawn-sync
+965 silly lifecycle spawn-sync@1.0.15~postinstall: Args: [ '-c', 'node postinstall' ]
+966 silly lifecycle spawn-sync@1.0.15~postinstall: Returned: code: 1  signal: null
+967 info lifecycle spawn-sync@1.0.15~postinstall: Failed to exec postinstall script
+968 verbose unlock done using /root/.npm/_locks/staging-9c2c560f48b49c1e.lock for /root/Okey_server/node_modules/.staging
+969 silly rollbackFailedOptional Starting
+970 silly rollbackFailedOptional Finishing
+971 silly runTopLevelLifecycles Finishing
+972 silly install printInstalled
+973 warn okeyserver@1.0.0 No description
+974 verbose If you need help, you may report this error at:
+974 verbose     <https://github.com/npm/npm/issues>
+975 verbose stack Error: spawn-sync@1.0.15 postinstall: `node postinstall`
+975 verbose stack Exit status 1
+975 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+975 verbose stack     at emitTwo (events.js:106:13)
+975 verbose stack     at EventEmitter.emit (events.js:191:7)
+975 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+975 verbose stack     at emitTwo (events.js:106:13)
+975 verbose stack     at ChildProcess.emit (events.js:191:7)
+975 verbose stack     at maybeClose (internal/child_process.js:886:16)
+975 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+976 verbose pkgid spawn-sync@1.0.15
+977 verbose cwd /root/Okey_server
+978 error Linux 4.4.0-72-generic
+979 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "spawn-sync"
+980 error node v6.10.2
+981 error npm  v3.10.10
+982 error code ELIFECYCLE
+983 error spawn-sync@1.0.15 postinstall: `node postinstall`
+983 error Exit status 1
+984 error Failed at the spawn-sync@1.0.15 postinstall script 'node postinstall'.
+984 error Make sure you have the latest version of node.js and npm installed.
+984 error If you do, this is most likely a problem with the spawn-sync package,
+984 error not with npm itself.
+984 error Tell the author that this fails on your system:
+984 error     node postinstall
+984 error You can get information on how to open an issue for this project with:
+984 error     npm bugs spawn-sync
+984 error Or if that isn't available, you can get their info via:
+984 error     npm owner ls spawn-sync
+984 error There is likely additional logging output above.
+985 verbose exit [ 1, true ]
