@@ -4,6 +4,7 @@ from __future__ import unicode_literals     #unicode 문제 해결
 import pycrfsuite                           #crf
 import sys
 
+
 def remove_function(string):        #문자열 공백지우기
     #string = unicode(string)
 
@@ -65,7 +66,6 @@ def spacing_function(string):
     features=feature_function(input_string)
     tag = tag_function(features)
 
-    #print result_function(input_string, tag)
     return result_function(input_string, tag)
 
 if __name__ == '__main__':

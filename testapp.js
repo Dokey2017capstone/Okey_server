@@ -25,7 +25,7 @@ var server = net.createServer(function(client) {
 			if(e == "spacing") {
 				console.log('spacing start! : ' + jsonData.spacingData);
 				var spawn = require('child_process').spawn;
-				var py = spawn('python', ["test/4_result.py", jsonData.spacingData]);
+				var py = spawn('python', ["4_result.py", jsonData.spacingData]);
 				py.stdout.on('data', function (data) {
 					spacedData += data;
 					spacedData = spacedData.trim();
@@ -33,7 +33,6 @@ var server = net.createServer(function(client) {
 					var responseStr = '{ "response" : ["spacing"], "spacing" : "' + spacedData + '"}\n';
 					writeData(client, responseStr);
 					console.log('Sending: ' + responseStr);
-					console.log('  Bytes sent: ' + client.bytesWritten);
 				});		
 				py.stdout.on('exit', function (code) {
 					if (code != 0) {
