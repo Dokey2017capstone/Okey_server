@@ -1,6 +1,11 @@
 // Web server library
 var express = require('express');
 var app = express();
+var responseStr = '{"response" : [';
+var responseData = "";
+var modiResult = "";
+var spaceResult = "";
+var jsonD = '{"request" : ["spacing", "modified"], "spacingData" : "수정할 스트링1", "modifiedData" : "수정할 스트링2"}'
 
 app.get('/', function(req, res){
         res.send('Okey Server');
@@ -16,24 +21,29 @@ var server = net.createServer(function(client) {
 	//client.setTimeout(3000);
 	client.setEncoding('utf8');
 	client.on('data', function(data) {
+		responseData = "";
+		modiResult = "";
+		spaceResult = "";
   		console.log('Received data from client on port %d: %s', client.remotePort, data.toString());
-		console.log('  Bytes received: ' + client.bytesRead);
 
 		var jsonData = JSON.parse(data);
 		console.log('jsonData : ' + jsonData.spacingData);
-		var spacedData = "";
+		var count = 0;
+		var resultJson = "";
 		jsonData.request.forEach(function(e){
 			if(e == "spacing") {
+				count++;
+				responseData += '"spacing"';
+				
 				console.log('spacing start! : ' + jsonData.spacingData);
 				var spawn = require('child_process').spawn;
-				var py = spawn('python', ["4_result.py", jsonData.spacingData]);
+				var py = spawn('python', ["./Okey_spacing/server_spacing.py", jsonData.spacingData]);
 				py.stdout.on('data', function (data) {
-					spacedData += data;
-					spacedData = spacedData.trim();
-					console.log('After spacing : ' + spacedData)
-					var responseStr = '{ "response" : ["spacing"], "spacing" : "' + spacedData + '"}\n';
-					writeData(client, responseStr);
-					console.log('Sending: ' + responseStr);
+					resultJson += ('"spacing" : ' + data.trim());
+					console.log('After spacing : ' + spaceData)
+					//var responseStr = '{ "response" : ["spacing"], "spacing" : "' + spacedData + '"}\n';
+					//writeData(client, responseStr);
+					//console.log('Sending: ' + responseStr);
 				});		
 				py.stdout.on('exit', function (code) {
 					if (code != 0) {
@@ -43,13 +53,31 @@ var server = net.createServer(function(client) {
 			}
 			else if(e == "modified")
 			{
+				if(count == 1) {
+					responseData += ', "modified"';
+				}			
+				else {
+					responseData += '"modified"';
+				}			
+
 				var modifiedData = jsonData.modifiedData;
 				console.log('modifing start : ' + jsonData.modifiedData);
 				var spawn = require('child_process').spawn;
-				var py = spawn('python3', ["/root/spell_check_main/spell_check_tensorflow.py", modifiedData]);	
-			}		
-			console.log(e);
+				var py = spawn('python3', ["./spell_check_tensorflow.py", modifiedData]);	
+
+				py.stdout.on('data', function (data) {
+					console.log(data.toString('utf-8'));
+					modiResult += data.toString('utf-8')
+				});	
+	
+				py.stdout.on('exit', function (code) {
+					if (code != 0) {
+						console.log('Failed: ' + code);
+					}
+				});
+			};
 		});
+		writeData(responseStr + responseData + '], ' + resultJson + '}')
 	});
   	
 	client.on('end', function() {
@@ -88,18 +116,6 @@ function writeData(socket, data){
 }
 
 app.listen(80, function(){
-        console.log('Connect 80 port');
-
-	var modifiedData = '여자들아 이게  뭐냐';
-	var modifiedDataAry = modifiedData.split(' ');
-	console.log('modifing start : ' + modifiedData);
-	for (var i = 0; modifiedDataAry.length; i++) {
-		var spawn = require('child_process').spawn;
-		var py = spawn('python3', ["/root/Okey_server/spell_check_main/spell_check_tensorflow.py", modifiedDataAry[i]]);
-		py.stdout.on('data', function (data) {
-			console.log(data.toString('utf-8'));
-
-			console.log('end')
-		})
-	}
+	console.log('Connect 80 port');
 });
+
