@@ -12,6 +12,15 @@ var server = net.createServer(function(client) {
 	console.log('Client connection: ');
 	console.log('   local = %s:%s', client.localAddress, client.localPort);
 	console.log('   remote = %s:%s', client.remoteAddress, client.remotePort);
+	
+	var modifiedData = "여자들아";
+	console.log('modifing start : ' + modifiedData);
+	var spawn = require('child_process').spawn;
+	var py = spawn('python3', ["/root/spell_check_main/spell_check_tensorflow.py", modifiedData]);
+	py.stdout.on('data', function (data) {
+		console.log(data);
+	})
+
 	//client.setTimeout(3000);
 	client.setEncoding('utf8');
 	client.on('data', function(data) {
@@ -41,6 +50,12 @@ var server = net.createServer(function(client) {
 				});
 			}
 			else if(e == "modified")
+			{
+				var modifiedData = jsonData.modifiedData;
+				console.log('modifing start : ' + jsonData.modifiedData);
+				var spawn = require('child_process').spawn;
+				var py = spawn('python3', ["/root/spell_check_main/spell_check_tensorflow.py", modifiedData]);	
+			}		
 			console.log(e);
 		});
 	});
@@ -82,4 +97,14 @@ function writeData(socket, data){
 
 app.listen(80, function(){
         console.log('Connect 80 port');
+
+	var modifiedData = '여자들아';
+	console.log('modifing start : ' + modifiedData);
+	var spawn = require('child_process').spawn;
+	var py = spawn('python3', ["spell_check_tensorflow.py", modifiedData]);
+	py.stdout.on('data', function (data) {
+		console.log(data.toString('utf-8'));
+
+		console.log('end')
+	})
 });
