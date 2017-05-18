@@ -6,9 +6,9 @@ from imp import reload
 from tensorflow.contrib.rnn import LSTMStateTuple, GRUCell
 
 
-file_name = './dic_modify.csv'
-graph_dir = './tmp/test_logs'
-save_dir = './tmp/checkpoint_dir'
+file_name = '/root/Okey_server/spell_check_main/dic_modify.csv'
+graph_dir = '/root/Okey_server/spell_check_main/tmp/test_logs'
+save_dir = '/root/Okey_server/spell_check_main/tmp/checkpoint_dir'
 class SmallConfig():
     """
     적은 학습 데이터에서의 하이퍼 파라미터

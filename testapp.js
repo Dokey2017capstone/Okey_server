@@ -13,14 +13,6 @@ var server = net.createServer(function(client) {
 	console.log('   local = %s:%s', client.localAddress, client.localPort);
 	console.log('   remote = %s:%s', client.remoteAddress, client.remotePort);
 	
-	var modifiedData = "여자들아";
-	console.log('modifing start : ' + modifiedData);
-	var spawn = require('child_process').spawn;
-	var py = spawn('python3', ["/root/spell_check_main/spell_check_tensorflow.py", modifiedData]);
-	py.stdout.on('data', function (data) {
-		console.log(data);
-	})
-
 	//client.setTimeout(3000);
 	client.setEncoding('utf8');
 	client.on('data', function(data) {
@@ -98,13 +90,16 @@ function writeData(socket, data){
 app.listen(80, function(){
         console.log('Connect 80 port');
 
-	var modifiedData = '여자들아';
+	var modifiedData = '여자들아 이게  뭐냐';
+	var modifiedDataAry = modifiedData.split(' ');
 	console.log('modifing start : ' + modifiedData);
-	var spawn = require('child_process').spawn;
-	var py = spawn('python3', ["spell_check_tensorflow.py", modifiedData]);
-	py.stdout.on('data', function (data) {
-		console.log(data.toString('utf-8'));
+	for (var i = 0; modifiedDataAry.length; i++) {
+		var spawn = require('child_process').spawn;
+		var py = spawn('python3', ["/root/Okey_server/spell_check_main/spell_check_tensorflow.py", modifiedDataAry[i]]);
+		py.stdout.on('data', function (data) {
+			console.log(data.toString('utf-8'));
 
-		console.log('end')
-	})
+			console.log('end')
+		})
+	}
 });
