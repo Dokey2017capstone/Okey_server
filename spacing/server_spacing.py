@@ -53,7 +53,7 @@ def rnn_fun(str, hidden_size, layers, input_dim):
     #session 실행
     sess = tf.Session()
     #saver.restore(sess, tf.train.latest_checkpoint('./ckpt/'))
-    saver.restore(sess, "./ckpt/my-model-2")
+    saver.restore(sess, "/root/Okey_server/spacing/ckpt/my-model-2")
 
     #resutling
     string = str
