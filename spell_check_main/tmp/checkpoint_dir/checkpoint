@@ -1,0 +1,4 @@
+model_checkpoint_path: "/root/Okey_server/spell_check_main/tmp/checkpoint_dir.ckpt-2"
+all_model_checkpoint_paths: "/root/Okey_server/spell_check_main/tmp/checkpoint_dir/checkpoint_dir.ckpt-0"
+all_model_checkpoint_paths: "/root/Okey_server/spell_check_main/tmp/checkpoint_dir/checkpoint_dir.ckpt-1"
+all_model_checkpoint_paths: "/root/Okey_server/spell_check_main/tmp/checkpoint_dir/checkpoint_dir.ckpt-2"

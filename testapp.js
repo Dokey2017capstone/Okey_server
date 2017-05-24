@@ -1,15 +1,9 @@
 // Web server library
-var express = require('express');
-var app = express();
 var responseStr = '{"response" : [';
 var responseData = "";
 var modiResult = "";
 var spaceResult = "";
 var jsonD = '{"request" : ["spacing", "modified"], "spacingData" : "수정할 스트링1", "modifiedData" : "수정할 스트링2"}'
-
-app.get('/', function(req, res){
-        res.send('Okey Server');
-});
 
 var net = require('net');
 
@@ -115,7 +109,4 @@ function writeData(socket, data){
 	}
 }
 
-app.listen(80, function(){
-	console.log('Connect 80 port');
-});
 
