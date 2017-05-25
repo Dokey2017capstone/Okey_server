@@ -43,14 +43,12 @@ var server = net.createServer(function(client) {
 		modiData = "";		
 	
 		if(jsonData.request[0] == "spacing") {
-			console.log('spacing');
 			pyShell.send('2' + jsonData.spacingData);
 			isModify = false;
 			isSpace = true;
 			writeData(client);
 		}
 		else if(jsonData.request[0] == "modified") {
-			console.log('modify');
 			pyShell.send('1'+jsonData.modifiedData.trim());
 			modiData = jsonData.modifiedData.trim();
 			isModify = true;
@@ -66,7 +64,6 @@ var server = net.createServer(function(client) {
 		});
 	});
 	client.on('error', function(err) {
-		console.log('Socket Error: ', JSON.stringify(err));
 	});
 	client.on('timeout', function() {
 		console.log('Socket Timed out');
@@ -86,17 +83,15 @@ server.listen(8100, function() {
 function writeData(client){
 	pyShell.on('message', function(message) {
 		if(isSpace) {
-			console.log('spacing end : ' + message);
-    
-			resultJson = ('"spacing" : "' + message + '"');
-			console.log('spacing end! : ', resultJson);
 			var resultResponse = responseStr + '"spacing"' + '], "spacing" : "' + message  + '"}\n\f\n';
-
-			console.log(resultResponse);
+			if(!count) {
+				count++;
+				console.log('spacing end : ' + message);
+				console.log(resultResponse);
+			}
 			client.write(resultResponse);
 		}
 		if(isModify) {
-			console.log('modifying end : ' + message);
 			var modiAry = modiData.split(' ');
 
 			var resultAry = message.split(',');
@@ -108,20 +103,14 @@ function writeData(client){
 			}
 			resultJson += '}';
 			var resultResponse = responseStr + '"modified"' + '], ' + resultJson  + '}\n\f\n';
-			console.log(resultResponse);
+			if(!count) {
+				console.log('modifying end : ' + message);
+				count++;
+				console.log(resultResponse);
+			}
 			client.write(resultResponse);
 		}
 	});
-
-	//var success = !client.write(data);
-//	pyShell.end();
-
-	//if (!success){
-	//	(function(socket, data){
-	//		socket.once('drain', function(){
-	//			writeData(socket, data);
-	//		});
-	//	})(socket, data);
-	//}
+	count = 0;
 }
 
