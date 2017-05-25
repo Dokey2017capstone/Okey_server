@@ -1,0 +1,6 @@
+model_checkpoint_path: "C:\\Users\\heojoung\\Desktop\\rnn/ckpt/my-model-5"
+all_model_checkpoint_paths: "C:\\Users\\heojoung\\Desktop\\rnn/ckpt/my-model-1"
+all_model_checkpoint_paths: "C:\\Users\\heojoung\\Desktop\\rnn/ckpt/my-model-2"
+all_model_checkpoint_paths: "C:\\Users\\heojoung\\Desktop\\rnn/ckpt/my-model-3"
+all_model_checkpoint_paths: "C:\\Users\\heojoung\\Desktop\\rnn/ckpt/my-model-4"
+all_model_checkpoint_paths: "C:\\Users\\heojoung\\Desktop\\rnn/ckpt/my-model-5"
