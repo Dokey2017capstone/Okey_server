@@ -3,7 +3,13 @@ var responseStr = '{"response" : [';
 var async = require('async');
 var net = require('net');
 var PythonShell = require('python-shell');
+var PythonShell = require('python-shell');
 var readline = require('readline');
+var count = 0;
+var isGetMessageDone = false;
+var modifiedAry = new Array();
+
+var spacingData = '{';
 
 var optionSpacing = { 
     mode: 'text',
@@ -17,8 +23,8 @@ var optionSpellCheck = {
     scriptPath: './okey_spellCheck'
 }
 
-var spacingShell = new PythonShell("server_spacing.py", optionSpacing);
 var spellCheckShell = new PythonShell("spell_check_tensorflow.py", optionSpellCheck);
+//var spacingShell = new PythonShell("server_spacing.py", optionSpacing);
 //var testShell = new PythonShell('spell_check_tensorflow.py', optionSpellCheck);
 
 //var r = readline.createInterface({
@@ -36,10 +42,24 @@ var spellCheckShell = new PythonShell("spell_check_tensorflow.py", optionSpellCh
 //	console.log(message);
 //});
 
-//spellCheckShell.send('무엇이');
 //spellCheckShell.on('message', function(message) {
 //	console.log('spellCheck :' +  message);
 //});
+
+spellCheckShell.on('message', function(message) {
+	console.log('spellCheck ' + count + ': ' + message);
+
+	if(count != 0) spacingData += ', ';
+	spacingData += ('"' + modifiedAry[count] + '" : ["' + count + '", "' + message + '"]');
+	if(count == modifiedAry.length - 1) {
+		spacingData += '}';
+		var resultResponse = responseStr + '"modified"' + '], "modified" : ' + spacingData + '}\n\f\n';
+		isGetMessageDone = true;
+		console.log(resultResponse);
+		count = 0;
+	}
+	else count++;
+});
 
 var server = net.createServer(function(client) {
 	console.log('Client connection: ');
@@ -74,27 +94,15 @@ var server = net.createServer(function(client) {
 			else if(jsonData.request[0] == "modified")
 			{
 				var modifiedData = jsonData.modifiedData.trim();
-				var modifiedAry = modifiedData.split(' ');	
+				modifiedAry = modifiedData.split(' ');	
 				console.log(modifiedAry);
+				console.log(modifiedAry.length);
 
-				var spacingData = '{'
-				for(var i = 0; i < modifiedAry.length; i++) {
-					spellCheckShell.send(modifiedAry[i]);
-					console.log(modifiedAry[i]);
-					spellCheckShell.on('message', function(message) {
-						console.log('spellCheck end : ' + message);
-
-						if(i != 0) spacingData += ', ';
-						spacingData += ('{"' + modifiedAry[i] + '" : ["' + i + '", "' + message + '"]');
-						if(i == modifiedAry.length - 1) {
-							spacingData += '}';
-							var resultResponse = responseStr + '"modified"' + '], "modified" : ' + spacingData + '\n\f\n';
-
-							console.log(resultResponse);
-							writeData(client, resultResponse);
-						}
-					});
-				}
+				spacingData = '{';
+				spellCheckShell.send(modifiedData);
+				while(!isGetMessageDone){}
+				
+				writeData(client, resultResponse);
 			};
 		//});
 	});
@@ -133,5 +141,3 @@ function writeData(socket, data){
 		})(socket, data);
 	}
 }
-
-
