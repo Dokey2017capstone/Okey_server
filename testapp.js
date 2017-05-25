@@ -1,18 +1,51 @@
 // Web server library
 var responseStr = '{"response" : [';
-var responseData = "";
-var modiResult = "";
-var spaceResult = "";
-var jsonD = '{"request" : ["spacing", "modified"], "spacingData" : "수정할 스트링1", "modifiedData" : "수정할 스트링2"}'
-
+var async = require('async');
 var net = require('net');
+var PythonShell = require('python-shell');
+var readline = require('readline');
+
+var optionSpacing = { 
+    mode: 'text',
+    pythonPath: '/usr/bin/python3',
+    scriptPath: './okey_spacing'
+}
+
+var optionSpellCheck = { 
+    mode: 'text',
+    pythonPath: '/usr/bin/python3',
+    scriptPath: './okey_spellCheck'
+}
+
+var spacingShell = new PythonShell("server_spacing.py", optionSpacing);
+var spellCheckShell = new PythonShell("spell_check_tensorflow.py", optionSpellCheck);
+//var testShell = new PythonShell('spell_check_tensorflow.py', optionSpellCheck);
+
+//var r = readline.createInterface({
+//	input:process.stdin});
+//r.setPrompt('> ');
+//r.prompt();
+
+//r.on('line', function(line) {
+//	testShell.send(line);
+//	r.setPrompt('> ');
+//	r.prompt();
+//});
+
+//testShell.on('message', function(message) {
+//	console.log(message);
+//});
+
+//spellCheckShell.send('무엇이');
+//spellCheckShell.on('message', function(message) {
+//	console.log('spellCheck :' +  message);
+//});
 
 var server = net.createServer(function(client) {
 	console.log('Client connection: ');
 	console.log('   local = %s:%s', client.localAddress, client.localPort);
 	console.log('   remote = %s:%s', client.remoteAddress, client.remotePort);
 	
-	//client.setTimeout(3000);
 	client.setEncoding('utf8');
 	client.on('data', function(data) {
 		responseData = "";
@@ -21,57 +54,49 @@ var server = net.createServer(function(client) {
   		console.log('Received data from client on port %d: %s', client.remotePort, data.toString());
 
 		var jsonData = JSON.parse(data);
-		console.log('jsonData : ' + jsonData.spacingData);
-		var count = 0;
 		var resultJson = "";
-		jsonData.request.forEach(function(e){
-			if(e == "spacing") {
-				count++;
-				responseData += '"spacing"';
-				
-				console.log('spacing start! : ' + jsonData.spacingData);
-				var spawn = require('child_process').spawn;
-				var py = spawn('python', ["./Okey_spacing/server_spacing.py", jsonData.spacingData]);
-				py.stdout.on('data', function (data) {
-					resultJson += ('"spacing" : ' + data.trim());
-					console.log('After spacing : ' + spaceData)
-					//var responseStr = '{ "response" : ["spacing"], "spacing" : "' + spacedData + '"}\n';
-					//writeData(client, responseStr);
-					//console.log('Sending: ' + responseStr);
-				});		
-				py.stdout.on('exit', function (code) {
-					if (code != 0) {
-						console.log('Failed: ' + code);
-					}
-				});
-			}
-			else if(e == "modified")
+		
+		//jsonData.request.forEach(function(e){
+			if(jsonData.request[0] == "spacing") {
+                spacingShell.send(jsonData.spacingData);
+    
+                spacingShell.on('message', function(message) {
+                    console.log('spacing end : ' + message);
+    
+                    resultJson += ('"spacing" : "' + message + '"');
+                    console.log('spacing end! : ', resultJson);
+                    var resultResponse = responseStr + '"spacing"' + '], "spacing" : "' + message  + '"}\n\f\n';
+
+                    console.log(resultResponse);
+                    writeData(client, resultResponse);
+                }); 
+            }   
+			else if(jsonData.request[0] == "modified")
 			{
-				if(count == 1) {
-					responseData += ', "modified"';
-				}			
-				else {
-					responseData += '"modified"';
-				}			
+				var modifiedData = jsonData.modifiedData.trim();
+				var modifiedAry = modifiedData.split(' ');	
+				console.log(modifiedAry);
 
-				var modifiedData = jsonData.modifiedData;
-				console.log('modifing start : ' + jsonData.modifiedData);
-				var spawn = require('child_process').spawn;
-				var py = spawn('python3', ["./spell_check_tensorflow.py", modifiedData]);	
+				var spacingData = '{'
+				for(var i = 0; i < modifiedAry.length; i++) {
+					spellCheckShell.send(modifiedAry[i]);
+					console.log(modifiedAry[i]);
+					spellCheckShell.on('message', function(message) {
+						console.log('spellCheck end : ' + message);
 
-				py.stdout.on('data', function (data) {
-					console.log(data.toString('utf-8'));
-					modiResult += data.toString('utf-8')
-				});	
-	
-				py.stdout.on('exit', function (code) {
-					if (code != 0) {
-						console.log('Failed: ' + code);
-					}
-				});
+						if(i != 0) spacingData += ', ';
+						spacingData += ('{"' + modifiedAry[i] + '" : ["' + i + '", "' + message + '"]');
+						if(i == modifiedAry.length - 1) {
+							spacingData += '}';
+							var resultResponse = responseStr + '"modified"' + '], "modified" : ' + spacingData + '\n\f\n';
+
+							console.log(resultResponse);
+							writeData(client, resultResponse);
+						}
+					});
+				}
 			};
-		});
-		writeData(responseStr + responseData + '], ' + resultJson + '}')
+		//});
 	});
   	
 	client.on('end', function() {
