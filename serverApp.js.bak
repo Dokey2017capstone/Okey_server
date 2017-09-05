@@ -20,9 +20,8 @@ var options = {
 }
 
 var pyShell = new PythonShell("test.py", options);
-//net.createServer([options],[connectionListener]) option-소켓 server 객체 생성시 사용되는 특정 옵션을 지정,
-//connetionListner- 콜백 함수로 연결된 클라이언트를 위한 Socket 객체를 전달
-var server = net.createServer(function(client) { //TCP 소켓 서버 생성(net.Server객체 사용) 
+
+var server = net.createServer(function(client) {
 	console.log('Client connection: ');
 	console.log('   local = %s:%s', client.localAddress, client.localPort);
 	console.log('   remote = %s:%s', client.remoteAddress, client.remotePort);
@@ -33,7 +32,7 @@ var server = net.createServer(function(client) { //TCP 소켓 서버 생성(net.Server
 	resultJson = "";
 	modiData = "";
 
-	client.on('data', function(data) { //이벤트 헨들러(클라이언트로부터 받은 데이터를 처리)
+	client.on('data', function(data) {
 		responseData = "";
 		modiResult = "";
 		spaceResult = "";
@@ -58,7 +57,7 @@ var server = net.createServer(function(client) { //TCP 소켓 서버 생성(net.Server
 		}     
 	});
 
-	client.on('end', function() { //소켓 종료 처리
+	client.on('end', function() {
 		console.log('Client disconnected');
 		server.getConnections(function(err, count) {
 			console.log('Remaining Connections: ' + count);
@@ -71,9 +70,9 @@ var server = net.createServer(function(client) { //TCP 소켓 서버 생성(net.Server
 	});
 });
 
-server.listen(8100, function() { //8100 포트로 연결 수신
+server.listen(8100, function() {
 	console.log('Server listening: ' + JSON.stringify(server.address()));
-	server.on('close', function(){//Server와 연결된 소켓을 닫음
+	server.on('close', function(){
 		console.log('Server Terminated');
 	});
 	server.on('error', function(err){
@@ -114,3 +113,4 @@ function writeData(client){
 	});
 	count = 0;
 }
+

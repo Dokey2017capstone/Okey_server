@@ -1,0 +1,36 @@
+#####   TCP   #####
+TCP(Transmission Conrtrol Protocol)-전화와 비슷
+상대방의 전화번호를 알고 있어야 전화를 거는것처럼 TCP 통신을 하기 위해서는 상대방의 IP 주소와
+Port를 알고 있어야 연결을 요청 할 수 있다. 전화를 걸더라도 받아주지 않으면 계속해서 대기해야한다.
+이와 마찬가지로 서버가 응답을 받아주지 않으면 계속적으로 요청을 하게 된다.
+만약 전화를 받았다고 가정하면 양방향 통신이 가능하다. 한번 연결되면 계속해서 상대방에게
+음성을 전달 할 수 있는 것 처럼 TCP 통신에서도 계속적으로 소켓을 통해서 데이터를 주고 받을 수 있다.
+
+#####  IPC   #####
+IPC(Inter Process Communication)-프로세스간 통신
+OS의 커널은 일반적으로 임의의 프로세스가 다른 프로세스의 메모리 주소 공간에 접근 할 수 있도록 되어있다.
+OS의 보호모드에서는 프로세스마다 메모리가 독립적으로 할당되며,프로세스끼리 메모리 접근을 할 수 없다.
+하지만 경우에 따라서는 프로세스간 데이터를 공유해야 하는 경우가 생긴다.
+!!프로세스의 주소공간을 보호 하는 동시에, 프로세스 간 서로 데이터를 주고 받는 기법이 필요해져서 나오게된 것이 IPC기법이다.
+
+#####  NET  #####
+Net-모듈 소켓: 전송 제어 프로토콜(TCP,IPC)을 사용 (Duplex 스트림 지원)
+The net module provides an asynchronous network API for creating stream-based TCP or IPC servers (net.createServer()) and clients (net.createConnection()).
+
+It can be accessed using:const net = require('net');
+
+비동기- 서버가 다른일을하다가 요청이 들어오면 처리
+동기- 서버가 요청이 들어올때까지 대기
+
+server.listen(handle[, backlog][, callback])
+server.listen(options[, callback])
+server.listen(path[, backlog][, callback]) for IPC servers
+server.listen([port][, host][, backlog][, callback]) for TCP servers
+
+@@@@@ socket.write @@@@@
+socket.write(data[, encoding][, callback])#
+
+Added in: v0.1.90
+Sends data on the socket. The second parameter specifies the encoding in the case of a string--it defaults to UTF8 encoding.
+Returns true if the entire data was flushed successfully to the kernel buffer. Returns false if all or part of the data was queued in user memory. 'drain' will be emitted when the buffer is again free.
+The optional callback parameter will be executed when the data is finally written out - this may not be immediately.
