@@ -16,14 +16,14 @@ var modiData = "";
 var options = { 
     mode: 'text',
     //pythonPath: '/usr/bin/python3',
-	pythonPath: ''
+    pythonPath: '',
     scriptPath: './okey_test'
 }
 
 var pyShell = new PythonShell("test.py", options);
-//net.createServer([options],[connectionListener]) option-¼ÒÄÏ server °´Ã¼ »ı¼º½Ã »ç¿ëµÇ´Â Æ¯Á¤ ¿É¼ÇÀ» ÁöÁ¤,
-//connetionListner- Äİ¹é ÇÔ¼ö·Î ¿¬°áµÈ Å¬¶óÀÌ¾ğÆ®¸¦ À§ÇÑ Socket °´Ã¼¸¦ Àü´Ş
-var server = net.createServer(function(client) { //TCP ¼ÒÄÏ ¼­¹ö »ı¼º(net.Server°´Ã¼ »ç¿ë) 
+//net.createServer([options],[connectionListener]) option-ì†Œì¼“ server ê°ì²´ ìƒì„±ì‹œ ì‚¬ìš©ë˜ëŠ” íŠ¹ì • ì˜µì…˜ì„ ì§€ì •,
+//connetionListner- ì½œë°± í•¨ìˆ˜ë¡œ ì—°ê²°ëœ í´ë¼ì´ì–¸íŠ¸ë¥¼ ìœ„í•œ Socket ê°ì²´ë¥¼ ì „ë‹¬
+var server = net.createServer(function(client) { //TCP ì†Œì¼“ ì„œë²„ ìƒì„±(net.Serverê°ì²´ ì‚¬ìš©) 
 	console.log('Client connection: ');
 	console.log('   local = %s:%s', client.localAddress, client.localPort);
 	console.log('   remote = %s:%s', client.remoteAddress, client.remotePort);
@@ -34,13 +34,13 @@ var server = net.createServer(function(client) { //TCP ¼ÒÄÏ ¼­¹ö »ı¼º(net.Server
 	resultJson = "";
 	modiData = "";
 
-	client.on('data', function(data) { //ÀÌº¥Æ® Çîµé·¯(Å¬¶óÀÌ¾ğÆ®·ÎºÎÅÍ ¹ŞÀº µ¥ÀÌÅÍ¸¦ Ã³¸®)
+	client.on('data', function(data) { //ì´ë²¤íŠ¸ í—¨ë“¤ëŸ¬(í´ë¼ì´ì–¸íŠ¸ë¡œë¶€í„° ë°›ì€ ë°ì´í„°ë¥¼ ì²˜ë¦¬)
 		responseData = "";
 		modiResult = "";
 		spaceResult = "";
-  		console.log('Received data from client on port %d: %s', client.remotePort, data.toString());//Å¬¶óÀÌ¾ğÆ® Æ÷Æ®¿Í µ¥ÀÌÅÍ ·Î±×
+  		console.log('Received data from client on port %d: %s', client.remotePort, data.toString());//í´ë¼ì´ì–¸íŠ¸ í¬íŠ¸ì™€ ë°ì´í„° ë¡œê·¸
 
-		jsonData = JSON.parse(data); //JSON °´Ã¼È­
+		jsonData = JSON.parse(data); //JSON ê°ì²´í™”
 		resultJson = "";
 		modiData = "";		
 	
@@ -59,7 +59,7 @@ var server = net.createServer(function(client) { //TCP ¼ÒÄÏ ¼­¹ö »ı¼º(net.Server
 		}     
 	});
 
-	client.on('end', function() { //¼ÒÄÏ Á¾·á Ã³¸®
+	client.on('end', function() { //ì†Œì¼“ ì¢…ë£Œ ì²˜ë¦¬
 		console.log('Client disconnected');
 		server.getConnections(function(err, count) {
 			console.log('Remaining Connections: ' + count);
@@ -72,10 +72,10 @@ var server = net.createServer(function(client) { //TCP ¼ÒÄÏ ¼­¹ö »ı¼º(net.Server
 	});
 });
 
-server.listen(8100, function() { //8100 Æ÷Æ®·Î ¿¬°á ¼ö½Å
+server.listen(8100, function() { //8100 í¬íŠ¸ë¡œ ì—°ê²° ìˆ˜ì‹ 
 	console.log('Server listening: ' + JSON.stringify(server.address()));
 
-	server.on('close', function(){//Server¿Í ¿¬°áµÈ ¼ÒÄÏÀ» ´İÀ½
+	server.on('close', function(){//Serverì™€ ì—°ê²°ëœ ì†Œì¼“ì„ ë‹«ìŒ
 		console.log('Server Terminated');
 	});
 	server.on('error', function(err){
@@ -102,7 +102,7 @@ function writeData(client){
 			for(var i = 0; i < modiAry.length; i++) {
 				if(i != 0) resultJson += ', '
 
-				resultJson += ('"' + modiAry[i] + '" : [ "' + i + '", "' + resultAry[i] +'"]');// ³ª´Â ¹äÀ» ¸Ó½À´Ï´Ù->"³ª´Â":["0","³ª´Â"],"¹äÀ»":["1","¹äÀ»"],"¸Ó½À´Ï´Ù":["2","¸Ô½À´Ï´Ù"]
+				resultJson += ('"' + modiAry[i] + '" : [ "' + i + '", "' + resultAry[i] +'"]');// ë‚˜ëŠ” ë°¥ì„ ë¨¸ìŠµë‹ˆë‹¤->"ë‚˜ëŠ”":["0","ë‚˜ëŠ”"],"ë°¥ì„":["1","ë°¥ì„"],"ë¨¸ìŠµë‹ˆë‹¤":["2","ë¨¹ìŠµë‹ˆë‹¤"]
 			}
 			resultJson += '}';
 			var resultResponse = responseStr + '"modified"' + '], ' + resultJson  + '}\n\f\n';
