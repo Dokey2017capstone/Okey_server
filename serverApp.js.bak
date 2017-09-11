@@ -2,7 +2,7 @@
 var responseStr = '{"response" : [';
 var async = require('async');
 var net = require('net');
-var PythonShell = require('python-shell');
+var PythonShell = require('python-shell'); 
 var readline = require('readline');
 var isModify = false;
 var isSpace = false;
@@ -15,13 +15,15 @@ var modiData = "";
 
 var options = { 
     mode: 'text',
-    pythonPath: '/usr/bin/python3',
+    //pythonPath: '/usr/bin/python3',
+	pythonPath: '',
     scriptPath: './okey_test'
 }
 
 var pyShell = new PythonShell("test.py", options);
-
-var server = net.createServer(function(client) {
+//net.createServer([options],[connectionListener]) option-소켓 server 객체 생성시 사용되는 특정 옵션을 지정,
+//connetionListner- 콜백 함수로 연결된 클라이언트를 위한 Socket 객체를 전달
+var server = net.createServer(function(client) { //TCP 소켓 서버 생성(net.Server객체 사용) 
 	console.log('Client connection: ');
 	console.log('   local = %s:%s', client.localAddress, client.localPort);
 	console.log('   remote = %s:%s', client.remoteAddress, client.remotePort);
@@ -32,13 +34,13 @@ var server = net.createServer(function(client) {
 	resultJson = "";
 	modiData = "";
 
-	client.on('data', function(data) {
+	client.on('data', function(data) { //이벤트 헨들러(클라이언트로부터 받은 데이터를 처리)
 		responseData = "";
 		modiResult = "";
 		spaceResult = "";
-  		console.log('Received data from client on port %d: %s', client.remotePort, data.toString());
+  		console.log('Received data from client on port %d: %s', client.remotePort, data.toString());//클라이언트 포트와 데이터 로그
 
-		jsonData = JSON.parse(data);
+		jsonData = JSON.parse(data); //JSON 객체화
 		resultJson = "";
 		modiData = "";		
 	
@@ -57,7 +59,7 @@ var server = net.createServer(function(client) {
 		}     
 	});
 
-	client.on('end', function() {
+	client.on('end', function() { //소켓 종료 처리
 		console.log('Client disconnected');
 		server.getConnections(function(err, count) {
 			console.log('Remaining Connections: ' + count);
@@ -70,9 +72,10 @@ var server = net.createServer(function(client) {
 	});
 });
 
-server.listen(8100, function() {
+server.listen(8100, function() { //8100 포트로 연결 수신
 	console.log('Server listening: ' + JSON.stringify(server.address()));
-	server.on('close', function(){
+
+	server.on('close', function(){//Server와 연결된 소켓을 닫음
 		console.log('Server Terminated');
 	});
 	server.on('error', function(err){
@@ -99,7 +102,7 @@ function writeData(client){
 			for(var i = 0; i < modiAry.length; i++) {
 				if(i != 0) resultJson += ', '
 
-				resultJson += ('"' + modiAry[i] + '" : [ "' + i + '", "' + resultAry[i] +'"]');
+				resultJson += ('"' + modiAry[i] + '" : [ "' + i + '", "' + resultAry[i] +'"]');// 나는 밥을 머습니다->"나는":["0","나는"],"밥을":["1","밥을"],"머습니다":["2","먹습니다"]
 			}
 			resultJson += '}';
 			var resultResponse = responseStr + '"modified"' + '], ' + resultJson  + '}\n\f\n';
@@ -113,4 +116,3 @@ function writeData(client){
 	});
 	count = 0;
 }
-

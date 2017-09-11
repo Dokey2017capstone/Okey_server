@@ -6,7 +6,8 @@ import recoverWord as rW
 import json
 import sys
 
-path = '/root/Okey_server/okey_test/'
+#path = '/root/Okey_server/okey_test/'
+path = 'C:/Users/user/Downloads/Okey_server/okey_test/'
 file_name = path + 'dic_modify_del.csv'
 graph_dir = path + 'tmp/test_logs'
 save_dir = path + 'tmp/checkpoint_dir'

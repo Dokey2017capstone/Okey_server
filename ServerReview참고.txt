@@ -34,3 +34,11 @@ Added in: v0.1.90
 Sends data on the socket. The second parameter specifies the encoding in the case of a string--it defaults to UTF8 encoding.
 Returns true if the entire data was flushed successfully to the kernel buffer. Returns false if all or part of the data was queued in user memory. 'drain' will be emitted when the buffer is again free.
 The optional callback parameter will be executed when the data is finally written out - this may not be immediately.
+
+@@@@@ socket.close @@@@@
+
+새로운 커넥션 연결을 중단하고 기존의 커넥션만 유지, 모든 커넥션이 종료되었을때 서버를 닫음
+
+@@@@@ server.address @@@@@
+
+IP 주소와 포트 번호와 같은 서버 정보를 운영체제로부터 가져온다. listening 이벤트가 발생한 후에만 메소드 호출이 가능하다.

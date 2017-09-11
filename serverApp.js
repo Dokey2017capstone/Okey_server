@@ -2,7 +2,7 @@
 var responseStr = '{"response" : [';
 var async = require('async');
 var net = require('net');
-var PythonShell = require('python-shell');
+var PythonShell = require('python-shell'); 
 var readline = require('readline');
 var isModify = false;
 var isSpace = false;
@@ -15,7 +15,8 @@ var modiData = "";
 
 var options = { 
     mode: 'text',
-    pythonPath: '/usr/bin/python3',
+    //pythonPath: '/usr/bin/python3',
+	pythonPath: ''
     scriptPath: './okey_test'
 }
 
@@ -37,9 +38,9 @@ var server = net.createServer(function(client) { //TCP 소켓 서버 생성(net.Server
 		responseData = "";
 		modiResult = "";
 		spaceResult = "";
-  		console.log('Received data from client on port %d: %s', client.remotePort, data.toString());
+  		console.log('Received data from client on port %d: %s', client.remotePort, data.toString());//클라이언트 포트와 데이터 로그
 
-		jsonData = JSON.parse(data);
+		jsonData = JSON.parse(data); //JSON 객체화
 		resultJson = "";
 		modiData = "";		
 	
@@ -73,6 +74,7 @@ var server = net.createServer(function(client) { //TCP 소켓 서버 생성(net.Server
 
 server.listen(8100, function() { //8100 포트로 연결 수신
 	console.log('Server listening: ' + JSON.stringify(server.address()));
+
 	server.on('close', function(){//Server와 연결된 소켓을 닫음
 		console.log('Server Terminated');
 	});
@@ -100,7 +102,7 @@ function writeData(client){
 			for(var i = 0; i < modiAry.length; i++) {
 				if(i != 0) resultJson += ', '
 
-				resultJson += ('"' + modiAry[i] + '" : [ "' + i + '", "' + resultAry[i] +'"]');
+				resultJson += ('"' + modiAry[i] + '" : [ "' + i + '", "' + resultAry[i] +'"]');// 나는 밥을 머습니다->"나는":["0","나는"],"밥을":["1","밥을"],"머습니다":["2","먹습니다"]
 			}
 			resultJson += '}';
 			var resultResponse = responseStr + '"modified"' + '], ' + resultJson  + '}\n\f\n';
